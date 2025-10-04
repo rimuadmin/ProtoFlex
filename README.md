@@ -6,6 +6,8 @@ Originally developed to support [TeensyMaestro hardware](https://github.com/rimu
 
 Beyond its initial scope, ProtoFlex supports scenarios such as simulating multiple FlexRadios on a network. ProtoFlex also emulates multiple panadapters and receive slices. Each panadapter includes an independent Spectrum Generator that approximates RF signals and noise, offering a realistic backdrop for client-side signal visualization and interaction.
 
+[Click here for ProtoFlex Documentation](https://github.com/rimuadmin/ProtoFlex/wiki)
+
 ### SmartSDR connected to ProtoFlex
 - ProtoFlex simulates panadatper, waterfall and meter streams.
 ![SmartSDR Connected](images/smart_sdr.png "SmartSDR Connected")
@@ -18,3 +20,4 @@ Beyond its initial scope, ProtoFlex supports scenarios such as simulating multip
 ### Browser Interface
 - ProtoFlex has a browser interface to show the state of the emulated radio. Some attributes, like meter values, can be changed using this interface.
 ![ProtoFlex Webapp](images/protoflex_main.png "ProtoFlex Webapp")
+
