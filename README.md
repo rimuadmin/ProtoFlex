@@ -5,3 +5,16 @@
 Originally developed to support [TeensyMaestro hardware](https://github.com/rimuadmin/TeensyMaestro-Hardware) testing in the absence of a FlexRadio, ProtoFlex provides a minimal yet functional simulation of FlexRadio behavior. It mimics expected responses and state transitions, making it ideal for environments with limited hardware access or where automated testing is essential.
 
 Beyond its initial scope, ProtoFlex supports scenarios such as simulating multiple FlexRadios on a network. ProtoFlex also emulates multiple panadapters and receive slices. Each panadapter includes an independent Spectrum Generator that approximates RF signals and noise, offering a realistic backdrop for client-side signal visualization and interaction.
+
+### SmartSDR connected to ProtoFlex
+- ProtoFlex simulates panadatper, waterfall and meter streams.
+![SmartSDR Connected](images/smart_sdr.png "SmartSDR Connected")
+
+### ProtoFlex Server Logging
+- ProtoFlex logs all the incoming TCP client commands, TCP status responses. 
+- The UDP Discovery payload is logged when a change to one of the attributes occurs.
+![ProtoFlex Log](images/protoflex_log.png "ProtoFlex Log")
+
+### Browser Interface
+- ProtoFlex has a browser interface to show the state of the emulated radio. Some attributes, like meter values, can be changed using this interface.
+![ProtoFlex Webapp](images/protoflex_main.png "ProtoFlex Webapp")
