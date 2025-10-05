@@ -12,7 +12,7 @@ on:
 
 env:
   GIT_AUTHOR_NAME: Actionbot
-  GIT_AUTHOR_EMAIL: sritchie99@mail.com
+  GIT_AUTHOR_EMAIL: sritchie99@gmail.com
 
 jobs:
   job-sync-docs-to-wiki:
