@@ -1,4 +1,4 @@
-# Introductionn
+# Introduction
 
 **ProtoFlex** is a protocol-level emulator that replicates the behavior of a FlexRadio including Maestro-style interactions over TCP and UDP. It simulates how FlexRadio devices respond to network commands, enabling developers, integrators, and testers to validate control workflows, debug protocol exchanges, and build custom SDR interfaces without requiring physical hardware.
 
