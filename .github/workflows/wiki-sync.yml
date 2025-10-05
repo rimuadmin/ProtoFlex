@@ -29,6 +29,18 @@ jobs:
 
           # Configure Git
           cd wiki
+          echo "🔍 Git remote configuration:"
+          git remote -v
+      
+          echo "🔍 Git config:"
+          git config --list
+      
+          echo "🔍 Attempting credential fill:"
+          git credential fill <<EOF
+protocol=https
+host=github.com
+EOF
+          
           git config user.name "rimuadmin"
           git config user.email "sritchie99@gmail.com"
           git config --global --add safe.directory "$GITHUB_WORKSPACE/wiki"
