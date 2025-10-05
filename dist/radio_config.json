@@ -1,0 +1,85 @@
+{
+  "max_slices": 2,
+  "max_panadapters": 2,
+  "lineout_gain": 100,
+  "lineout_mute": 0,
+  "headphone_gain": 100,
+  "headphone_mute": 0,
+  "remote_on_enabled": 1,
+  "pll_done": 0,
+  "freq_error_ppb": -4,
+  "cal_freq": 2.500000,
+  "tnf_enabled": 1,
+  "nickname": "ProtoFlex",
+  "callsign": "PR0TO",
+  "binaural_rx": 0,
+  "full_duplex_enabled": 0,
+  "band_persistence_enabled": 1,
+  "rtty_mark_default": 2125,
+  "enforce_private_ip_connections": 0,
+  "backlight": 3,
+  "mute_local_audio_when_remote": 1,
+  "daxiq_capacity": 16,
+  "daxiq_available": 14,
+  "alpha": 0,
+  "low_latency_digital_modes": 0,
+  "mf_enable": 1,
+  "auto_save": 1,
+  "discovery_protocol_version": "3.0.0.3",
+  "api_version": "V1.4.0.0",
+  "model": "FLEX-6400",
+  "serial": "0111-2222-3333-4444",
+  "version": "3.10.10.38187",
+  "radio_license_id": "00-01-02-03-04-05",
+  "requires_additional_license": 0,
+  "licensed_clients": 2, 
+  "max_licensed_version": "v3",
+  "min_software_version": "2.1.20.0",
+  "external_port_link": 1,
+
+  "filter_sharpness_voice": {
+    "level": 0,
+    "auto_level": 1
+  },
+  "filter_sharpness_cw": {
+    "level": 2,
+    "auto_level": 1
+  },
+  "filter_sharpness_digital": {
+    "level": 0,
+    "auto_level": 1
+  },
+  "eq": {
+    "rx": {
+      "mode": 0,
+      "freq_63Hz": -10,
+      "freq_125Hz": -10,
+      "freq_250Hz": 0,
+      "freq_500Hz": 0,
+      "freq_1000Hz": 5,
+      "freq_2000Hz": 5,
+      "freq_4000Hz": 0,
+      "freq_8000Hz": 0
+    },
+    "rxsc": {
+      "mode": 0,
+      "freq_63Hz": 0,
+      "freq_125Hz": 0,
+      "freq_250Hz": 0,
+      "freq_500Hz": 0,
+      "freq_1000Hz": 0,
+      "freq_2000Hz": 0,
+      "freq_4000Hz": 0,
+      "freq_8000Hz": 0
+    }
+  },
+  "network": {
+    "static_net_params": {
+      "ip": "",
+      "gateway": "",
+      "netmask": ""
+    },
+    "radio_tcp_port": 4992,
+    "udp_port": 4992
+  }
+}

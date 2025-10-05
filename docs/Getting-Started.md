@@ -1,20 +1,20 @@
+### Requirements
+- At this time ProtoFlex only runs on Windows.
+
 ### Running ProtoFlex on Windows
-
 1. Create a folder on your PC.
-2. Download the executable (protoflex.exe) from the repository 'dist' folder and store it in the local folder.
-3. Copy the radio_config.json file from the repository to the same local folder.
-4. Open a command line window.
-5. Change directory to the local folder.
-6. Run the command: `protoflex.exe --config-file radio_config.json`
-
-The ProtoFlex server will start running. At this point you can connect SmartSDR to ProtoFlex.
-
-Using a browser, go to http://localhost:5000 to display the browser interface.
-
-Start SmartSDR and the Protoflex Radio Emulator will be listed.
+2. Download the following files from the repository 'dist' folder and store them in the local folder:
+   - protoflex.bat
+   - protoflex.exe
+   - radio_config.json
+3. Double click on the file `protoflex.bat` to run ProtoFlex.
+   - The ProtoFlex server will start running.
+   - It will log to the console and also to a file.
+4. Start SmartSDR and the Protoflex will be listed as a radio.
+5. Using a browser, go to http://localhost:5000 to display the browser interface.
 
 ### Access ProtoFlex Webapp Another Device
-- If you have started ProtoFlex on a Windows computer, you can access the web app from another device on the network.
+- If you have started ProtoFlex on a computer, you can access the web app from another device on the network.
 - Determine the IP address of the computer running ProtoFlex, say 192.168.1.100
 - On the remote device, use a browser to go to http://192.168.1.100:5000
 
