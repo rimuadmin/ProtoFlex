@@ -11,7 +11,7 @@ ProtoFlex simulates panadapter, waterfall and meter streams:
 
 ![SmartSDR Connected](https://github.com/rimuadmin/ProtoFlex/blob/main/images/smart_sdr.png)
 
-# Server Logging
+# Full Logging
 - ProtoFlex logs all the incoming TCP client commands, responses and status responses. 
 - The UDP Discovery payload is logged when a change to one of the attributes occurs.
 
