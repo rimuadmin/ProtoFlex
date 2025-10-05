@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'docs/wiki/**'
+      - 'wiki/**'
       - .github/workflows/wiki-sync.yml
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,4 +28,4 @@ jobs:
         ACTION_NAME: rimuadmin
         OWNER: rimuadmin
         REPO_NAME: ProtoFlex
-        MD_FOLDER: docs/wiki
+        MD_FOLDER: wiki
