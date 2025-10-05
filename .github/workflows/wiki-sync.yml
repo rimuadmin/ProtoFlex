@@ -28,4 +28,4 @@ jobs:
         ACTION_NAME: rimuadmin
         OWNER: rimuadmin
         REPO_NAME: ProtoFlex
-        MD_FOLDER: ./wiki
+        MD_FOLDER: wiki
