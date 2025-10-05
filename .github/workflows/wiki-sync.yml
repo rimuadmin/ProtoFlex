@@ -1,0 +1,31 @@
+# .github/workflows/wiki-sync.yml
+name: Sync Wiki
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    paths:
+      - 'docs/wiki/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v3
+
+      - name: Clone wiki repo
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.wiki.git wiki
+          rsync -av --delete docs/wiki/ wiki/
+          cd wiki
+          git config user.name "rimuadmin"
+          git config user.email "sritchie99@gmail.com"
+          git add .
+          git commit -m "Automated wiki sync"
+          git push
