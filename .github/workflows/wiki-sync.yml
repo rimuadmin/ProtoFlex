@@ -4,27 +4,28 @@ on:
   push:
     branches: [main]
     paths:
-      - 'wiki/**'
+      - 'docs/**'
       - .github/workflows/wiki-sync.yml
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-concurrency:
-  group: publish-wiki
-  cancel-in-progress: true
 
-permissions:
-  contents: write
+env:
+  GIT_AUTHOR_NAME: Actionbot
+  GIT_AUTHOR_EMAIL: sritchie99@mail.com
 
 jobs:
-  publish-wiki:
+  job-sync-docs-to-wiki:
     runs-on: ubuntu-latest
     steps:
-    - name: Sync to Wiki
-      uses: docker://decathlon/wiki-page-creator-action:latest
-      env:
-        GH_PAT: ${{ secrets.WIKI_SYNC }}
-        ACTION_MAIL: sritchie99@mail.com
-        ACTION_NAME: rimuadmin
-        OWNER: rimuadmin
-        REPO_NAME: ProtoFlex
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Sync docs to wiki
+        uses: newrelic/wiki-sync-action@main
+        with:
+          source: docs
+          destination: wiki
+          token: ${{ secrets.WIKI_SYNC }}
+          gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
+          gitAuthorEmail: ${{ env.GIT_AUTHOR_EMAIL }}    
+
