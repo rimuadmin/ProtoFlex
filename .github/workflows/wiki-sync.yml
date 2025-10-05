@@ -37,9 +37,9 @@ jobs:
       
           echo "🔍 Attempting credential fill:"
           git credential fill <<EOF
-protocol=https
-host=github.com
-EOF
+          protocol=https
+          host=github.com
+          EOF
           
           git config user.name "rimuadmin"
           git config user.email "sritchie99@gmail.com"
