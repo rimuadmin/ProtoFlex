@@ -26,6 +26,18 @@ jobs:
           cd wiki
           git config user.name "rimuadmin"
           git config user.email "sritchie99@gmail.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE/wiki"
+
+          # Set remote URL explicitly to ensure push uses the correct token
+          git remote set-url origin https://x-access-token:${{ secrets.WIKI_SYNC }}@github.com/${{ github.repository }}.wiki.git
+
+          # Stage changes
           git add .
-          git commit -m "Automated wiki sync"
-          git push
+
+          # Commit only if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated wiki sync"
+            git push
+          fi
