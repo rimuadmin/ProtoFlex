@@ -1,7 +1,7 @@
 ProtoFlex has a browser interface to show the state of the emulated radio. Some attributes, like meter values, can be changed while ProtoFlex is running using this interface.
 
 # Main Page
-
+The main page shows the radio model and version numbers, the maximum limits of the radio and the internal state values.
 ![ProtoFlex Main Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main.png "ProtoFlex Main Page")
 
 # Slices Page
