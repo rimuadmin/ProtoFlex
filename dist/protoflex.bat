@@ -1,1 +1,0 @@
-.\protoflex.exe --config-file radio_config.json --log-file protoflex.log

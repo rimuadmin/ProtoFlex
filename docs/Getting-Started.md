@@ -3,12 +3,12 @@
 
 ## Running ProtoFlex on Windows
 1. Create a folder on your PC.
-2. Download the following files from the repository 'dist' folder and store them in the local folder:
+2. Download the following files from the repository and store them in the local folder:
    - protoflex.bat
    - protoflex.exe
    - radio_config.json
 3. Double click on the file `protoflex.bat` to run ProtoFlex.
-   - The ProtoFlex server will start running.
+   - The ProtoFlex server will start running in a terminal window. Minimize the window if needed.
    - It will log to the console and also to a file.
 4. Start SmartSDR and the Protoflex will be listed. If you have a FlexRadio on the same subnet you will see two choices:
 
@@ -17,6 +17,10 @@
 5. Using a browser, go to http://localhost:5000 to display the browser interface.
 
 ![Browser Main Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main_2.png)
+
+## Stopping ProtoFlex
+
+1. Close the terminal window.
 
 ## Access the ProtoFlex web app from another device
 - If you have started ProtoFlex on a computer, you can access the web app from another device on the network.
