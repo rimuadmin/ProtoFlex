@@ -10,17 +10,17 @@ The main page shows the radio model and version numbers, the maximum limits of t
 
 # Pan-Adapters Page
 
-![ProtoFlex Panadapters Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_pans.png "ProtoFlex Panadapters Page")
+[![ProtoFlex Panadapters Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_pans.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_pans.png)
 
 # Waterfalls Page
 
-![ProtoFlex Waterfalls Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_waterfalls.png "ProtoFlex Waterfalls Page")
+[![ProtoFlex Waterfalls Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_waterfalls.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_waterfalls.png)
 
 # Meters Page
 
-![ProtoFlex Meters Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_meters.png "ProtoFlex Meters Page")
+[![ProtoFlex Meters Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_meters.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_meters.png)
 
 # Sessions Page
 
-![ProtoFlex Sessions Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_sessions.png "ProtoFlex Sessions Page")
+[![ProtoFlex Sessions Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_sessions.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_sessions.png)
 
