@@ -24,3 +24,10 @@ The main page shows the radio model and version numbers, the maximum limits of t
 
 [![ProtoFlex Sessions Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_sessions.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_sessions.png)
 
+# Spots Page
+
+[![ProtoFlex Spots Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_spots.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_spots.png)
+
+# Trigger Page
+
+[![ProtoFlex Trigger Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_trigger.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_trigger.png)

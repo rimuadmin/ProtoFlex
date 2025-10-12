@@ -12,11 +12,11 @@
    - It will log to the console and also to a file.
 4. Start SmartSDR and the Protoflex will be listed. If you have a FlexRadio on the same subnet you will see two choices:
 
-![SmartSDR Selection](https://github.com/rimuadmin/ProtoFlex/blob/main/images/smart_sdr_radio_selection.png)
+![SmartSDR Selection](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/smart_sdr_radio_selection.png)
    
 5. Using a browser, go to http://localhost:5000 to display the browser interface.
 
-![Browser Main Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main_2.png)
+![Browser Main Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_main_2.png)
 
 ## Stopping ProtoFlex
 
