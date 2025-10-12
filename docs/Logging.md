@@ -23,7 +23,7 @@ There are some other ways of logging the interaction between a client and a Flex
 - If you have a higher end managed switch, your switch may have the capability of mirroring one port to another port. When testing custom microcontroller hardware, this may allow you to plug that device into a port that is being mirrored to another PC running WireShark. 
 - I was unsuccessful logging traffic when plugging a FlexRadio into a mirrored port - SmartSDR lost the connection. I'm yet to try plugging a client device (like the TeensyMaestro) into a mirrored port.
 
-### Use a Second client That Logs Flex Traffic
-- Connecting a second client will allow you to see the Status Messages that the Flex sends to all clients, but it won't allow you to see the Command and Response traffic that is between the device being tested and the radio.
+#### Second client for Logging Flex Traffic
+- Connecting a second client that establishes a connection and logs the TCP messages is receives will allow you to see the Status Messages that the Flex sends to all clients. However, it won't allow you to see the Command and Response traffic that is between a device being tested and the radio.
 
 
