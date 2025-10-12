@@ -13,7 +13,7 @@
 
 ### CW (Morse Code) Control
 - `C<n>|cw key <state>`
-- `C<n>|cw <text>`
+- `C<n>|cw <subcommand> <parameters>`
 
 ### Display Control
 - `C<n>|display panafall create [<parameters>]`
