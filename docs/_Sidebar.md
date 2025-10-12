@@ -1,5 +1,5 @@
 * [Home](https://github.com/rimuadmin/ProtoFlex/wiki)
-* [Features & Limitations](https://github.com/rimuadmin/ProtoFlex/wiki/Features-&-Limitations)
+* [Features](https://github.com/rimuadmin/ProtoFlex/wiki/Features)
 * [Browser Interface](https://github.com/rimuadmin/ProtoFlex/wiki/Browser-Interface)
 * [Getting Started](https://github.com/rimuadmin/ProtoFlex/wiki/Getting-Started)
 * [Configuration](https://github.com/rimuadmin/ProtoFlex/wiki/Configuration)
