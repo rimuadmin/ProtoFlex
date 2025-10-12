@@ -1,5 +1,5 @@
 ### Overview
-The behavior of ProtoFlex is a best attempt at mimicking the behavior of a FlexRadio, mostly based on the (now quite old) published API specifications and observed behavior of a FLEX-6400 for SmartSDR version 3.10.10. There may be differences when compared to other Flex models or SmartSDR versions.
+The behavior of ProtoFlex is a best attempt at mimicking the behavior of a FlexRadio, mostly based on the (now quite old) published API specifications and using WireShark to observe the network protocol behavior of a FLEX-6400 and SmartSDR version 3.10.10. There may be differences when compared to other Flex models or SmartSDR versions.
 
 ### Spectrum Generator
 - ProtoFlex's signal generation doesn't mimic FlexRadio's Spectral Capture Units (SCUs) exactly. 
