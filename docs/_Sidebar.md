@@ -3,5 +3,6 @@
 * [Browser Interface](https://github.com/rimuadmin/ProtoFlex/wiki/Browser-Interface)
 * [Getting Started](https://github.com/rimuadmin/ProtoFlex/wiki/Getting-Started)
 * [Configuration](https://github.com/rimuadmin/ProtoFlex/wiki/Configuration)
+* [Logging](https://github.com/rimuadmin/ProtoFlex/wiki/Logging)
 * [Limitations](https://github.com/rimuadmin/ProtoFlex/wiki/Limitations)
 * [Supported Commands](https://github.com/rimuadmin/ProtoFlex/wiki/Supported-TCP-Commands)
