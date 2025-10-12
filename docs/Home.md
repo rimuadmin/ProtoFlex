@@ -9,17 +9,17 @@ Beyond its initial scope, ProtoFlex supports scenarios such as simulating multip
 # SmartSDR connected to ProtoFlex
 ProtoFlex simulates panadapter, waterfall and meter streams:
 
-![SmartSDR Connected](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/smart_sdr.png)
+[![SmartSDR Connected](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/smart_sdr.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/smart_sdr.png)
 
 # Full Logging
 - ProtoFlex logs all the incoming TCP client commands, responses and status responses. 
 - The UDP Discovery payload is logged when a change to one of the attributes occurs.
 
-![ProtoFlex Log](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_log.png "ProtoFlex Log")
+[![ProtoFlex Log](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_log.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_log.png)
 
 # Browser Interface
 ProtoFlex has a browser interface to show the state of the emulated radio. Some attributes, like meter values, can be changed using this interface.
 
-![ProtoFlex Main Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_main.png "ProtoFlex Main Page")
+[![ProtoFlex Main Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_main.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_main.png)
 
 
