@@ -2,7 +2,7 @@ ProtoFlex has a browser interface to show the state of the emulated radio. Some 
 
 # Main Page
 The main page shows the radio model and version numbers, the maximum limits of the radio and the internal state values.
-[![ProtoFlex Main Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main.png)](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main.png)
+[![ProtoFlex Main Page](https://github.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/blob/main/images/protoflex_main.png)
 
 # Slices Page
 
