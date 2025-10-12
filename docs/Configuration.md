@@ -2,7 +2,7 @@
 
 - The max_slices and max_panadapters values can be increased to simulate other models of Flex Radios.
 
-- It can even be used to simulate models that don't yet exist.
+- It can even be used to simulate FlexRadio models that don't yet exist!
 
 [![SmartSDR Connected](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)
 
