@@ -1,7 +1,14 @@
 ### ProtoFlex is configured with a JSON file
 
-- The max_slices and max_panadapters values can be increased to simulate Flex radios that support more than two each.
+- The max_slices and max_panadapters values can be increased to simulate other models of Flex Radios.
 
+- It can even be used to simulate models that don't yet exist.
+
+[![SmartSDR Connected](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)
+
+
+
+## Default JSON file
 ```JSON
 {
   "max_slices": 2,
