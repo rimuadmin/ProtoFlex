@@ -1,14 +1,14 @@
-Here are some use cases where ProtoFlex is an ideal diagnostic tool.
+ProtoFlex is a versatile tool for testing and debugging FlexRadio client applications. Below are several scenarios where it excels:
 
 ## 1. Test Commands Sent from a Custom Client
-
-By connecting SmartSDR to ProtoFlex, the log will list all the commands that SmartSDR uses. While this can be done with WireShark, it takes more effort to parse out the command and response strings. However, if a custom hardware device is connecting to a FlexRadio, it's very difficult to use WireShark. With firmware changes, the hardware device might be able to log the commands and responses, but this much easier with ProtoFlex.
+When SmartSDR connects to ProtoFlex, all exchanged commands are logged in plain text—making it easy to analyze protocol behavior. While WireShark can capture similar traffic, parsing command and response strings is far more tedious. For custom hardware clients, WireShark becomes impractical due to limited visibility and decoding complexity. Although firmware modifications might enable internal logging, ProtoFlex offers a much simpler and more reliable alternative.
 
 ## 2. Test Multiple FlexRadios on the Same Subnet
-If your client application needs to test the use case where there is more than one FlexRadio on the same subnet, ProtoFlex is ideal. Instead of buying or borrowing a second FlexRadio, start one (or more) ProtoFlex instances on the same subnet. Change the JSON configuration file to give each ProtoFlex instance a different name. Each ProtoFlex instance will broadcast VITA-49 UDP Discovery packets. You can then test how your application handles selecting one of the FlexRadios.
+If you need to test how your client handles multiple FlexRadios on the same subnet, ProtoFlex makes this easy. Instead of sourcing additional hardware, launch multiple ProtoFlex instances with unique names via their JSON config files. Each instance will broadcast VITA-49 UDP Discovery packets, allowing you to validate how your application detects and selects among available radios.
 
 ## 3. Test Client Application Handling of Meter Data
-If you have a client application that consumes meter data to provide warnings on high temperatures or low power, use ProtoFlex and change the meter values while it's running using the Web Application. You could check to see if your application warns the user when over a certain temperature or under a specific voltage.
+If your application monitors meter data — such as temperature, voltage, or fan levels — ProtoFlex lets you simulate dynamic changes in real time. Use the built-in Web UI to adjust meter values and verify that your client responds appropriately, such as triggering alerts for overheating or low voltage conditions.
 
 ## 4. Log Client Commands for Bug Report
-If you suspect a FlexRadio bug and want to record the commands that are being used by your custom hardware, to then test using a simple client (i.e. Putty) then ProtoFlex will log the commands your device is sending.
+If suspect a bug in FlexRadio's firmware or API behavior, use ProtoFlex to log every command sent by your custom hardware. These logs can then be replayed or tested using simple clients like PuTTY, helping you isolate issues and generate reproducible bug reports.
+
