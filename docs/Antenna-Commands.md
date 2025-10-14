@@ -1,0 +1,19 @@
+# Antenna Commands
+
+## LIST
+
+Get list of available antenna ports.
+
+```
+C[D]<seq_number>|ant list
+```
+
+**Example:**
+```
+C150|ant list
+```
+
+**Response:**
+```
+R150|0|ANT1 ANT2 RX_A RX_B XVTR|               (success - returns antenna list)
+```

@@ -1,0 +1,19 @@
+# Meter Commands
+
+## LIST
+
+Get list of available meters.
+
+```
+C[D]<seq_number>|meter list
+```
+
+**Example:**
+```
+C230|meter list
+```
+
+**Response:**
+```
+R230|0|1.src=COD~ANT#1.unit=SWR.low=1.0.hi=10.0 2.src=COD~ANT#1.unit=FORW.low=0.0.hi=100.0|  (success - returns meter list)
+```

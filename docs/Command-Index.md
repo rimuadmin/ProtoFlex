@@ -29,7 +29,22 @@ This documentation provides comprehensive reference for all FlexRadio API comman
 - [**Spot Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Spot-Commands) - DX cluster spot management
 
 ### System and Utilities
-- [**Miscellaneous Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Miscellaneous-Commands) - ATU, meters, TNF, antennas, and other utilities
+- [**Antenna Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Antenna-Commands) - Antenna port listing and selection
+- [**ATU Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/ATU-Commands) - Antenna Tuning Unit control and configuration
+- [**Equalizer Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Equalizer-Commands) - Audio equalizer and Auto Peak Filter control
+- [**Filter Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Filter-Commands) - Receiver filter bandwidth control
+- [**Information Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Information-Commands) - Radio information and version queries
+- [**Interlock Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Interlock-Commands) - Transmit interlock configuration
+- [**Keepalive Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Keepalive-Commands) - Connection keepalive mechanism
+- [**License Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/License-Commands) - Radio license management
+- [**Memory Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Memory-Commands) - Memory channel operations
+- [**Meter Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Meter-Commands) - Radio meter and measurement access
+- [**MOX Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/MOX-Commands) - Manual On/Off transmission control
+- [**Ping Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Ping-Commands) - Network connectivity testing
+- [**Subscription Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Subscription-Commands) - Status update subscriptions
+- [**TNF Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/TNF-Commands) - Tracking Notch Filter control
+- [**Transverter Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Transverter-Commands) - Transverter configuration
+- [**Waveform Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Waveform-Commands) - Waveform management
 
 ## Command Format
 

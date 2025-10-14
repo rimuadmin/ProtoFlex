@@ -1,0 +1,37 @@
+# Information Commands
+
+## INFO
+
+Get radio information.
+
+```
+C[D]<seq_number>|info
+```
+
+**Example:**
+```
+C180|info
+```
+
+**Response:**
+```
+R180|0|model=FLEX-6700 version=3.4.15 serial=1234-5678-9012-3456|  (success - returns radio info)
+```
+
+## VERSION
+
+Get radio version information.
+
+```
+C[D]<seq_number>|version
+```
+
+**Example:**
+```
+C181|version
+```
+
+**Response:**
+```
+R181|0|3.4.15.987|                              (success - returns firmware version)
+```

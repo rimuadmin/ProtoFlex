@@ -1,0 +1,65 @@
+# Equalizer Commands
+
+## GET INFO
+
+Get equalizer information.
+
+```
+C[D]<seq_number>|eq <eq_select> sc info
+```
+
+**Parameters:**
+- `<eq_select>` = equalizer selection
+
+**Example:**
+```
+C160|eq 0 sc info
+```
+
+## APF GAIN
+
+Set Auto Peak Filter gain.
+
+```
+C[D]<seq_number>|eq apf gain <0-100>
+```
+
+**Parameters:**
+- `<0-100>` = gain level
+
+**Example:**
+```
+C161|eq apf gain 50
+```
+
+## APF MODE
+
+Set Auto Peak Filter mode.
+
+```
+C[D]<seq_number>|eq apf mode <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = mode setting
+
+**Example:**
+```
+C162|eq apf mode 1
+```
+
+## APF QFACTOR
+
+Set Auto Peak Filter Q factor.
+
+```
+C[D]<seq_number>|eq apf qfactor <0-33>
+```
+
+**Parameters:**
+- `<0-33>` = Q factor value
+
+**Example:**
+```
+C163|eq apf qfactor 10
+```
