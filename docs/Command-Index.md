@@ -5,25 +5,25 @@ This documentation provides comprehensive reference for all FlexRadio API comman
 ## Command Categories
 
 ### Core Radio Control
-- [**Slice Commands**](slice_commands.md) - Receiver slice control, tuning, and configuration
-- [**Radio Commands**](radio_commands.md) - Global radio settings and configuration
-- [**Transmit Commands**](transmit_commands.md) - RF power, audio processing, and transmission parameters
+- [**Slice Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Slice-commands) - Receiver slice control, tuning, and configuration
+- [**Radio Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Radio-Commands) - Global radio settings and configuration
+- [**Transmit Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Transmit-Commands) - RF power, audio processing, and transmission parameters
 
 ### Client and Connectivity
-- [**Client Commands**](client_commands.md) - Client connection and session management
-- [**WAN Commands**](spot_wan_commands.md) - Wide Area Network remote access
+- [**Client Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Client-Commands) - Client connection and session management
+- [**WAN Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Spot-WAN-Commands) - Wide Area Network remote access
 
 ### Audio and CW
-- [**CW Commands**](cw_commands.md) - Morse code keying and CWX text buffer operations
-- [**Audio and Profile Commands**](audio_profile_commands.md) - Microphone, mixer, and profile management
+- [**CW Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/CW-Commands) - Morse code keying and CWX text buffer operations
+- [**Audio and Profile Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Audio-Profile-Commands) - Microphone, mixer, and profile management
 
 ### Display and Data
-- [**Display Commands**](display_commands.md) - Panadapter and waterfall display control
-- [**File and Stream Commands**](file_stream_commands.md) - File operations and audio/data streams
-- [**Spot Commands**](spot_wan_commands.md) - DX cluster spot management
+- [**Display Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Display-Commands) - Panadapter and waterfall display control
+- [**File and Stream Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/File-Stream-Commands) - File operations and audio/data streams
+- [**Spot Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Spot-WAN-Commands) - DX cluster spot management
 
 ### System and Utilities
-- [**Miscellaneous Commands**](miscellaneous_commands.md) - ATU, meters, TNF, antennas, and other utilities
+- [**Miscellaneous Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Miscellaneous-Commands) - ATU, meters, TNF, antennas, and other utilities
 
 ## Command Format
 
