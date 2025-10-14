@@ -29,6 +29,7 @@ This documentation provides comprehensive reference for all FlexRadio API comman
 - [**Spot Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Spot-Commands) - DX cluster spot management
 
 ### System and Utilities
+- [**Amplifier Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Amplifier-Commands) - External hardware amplifier control
 - [**Antenna Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Antenna-Commands) - Antenna port listing and selection
 - [**ATU Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/ATU-Commands) - Antenna Tuning Unit control and configuration
 - [**Equalizer Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Equalizer-Commands) - Audio equalizer and Auto Peak Filter control
