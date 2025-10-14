@@ -1,8 +1,6 @@
-# WAN Commands
-
 WAN (Wide Area Network) commands manage remote radio access and connectivity.
 
-## REGISTER
+### REGISTER
 
 Register radio with WAN service using owner token.
 
@@ -24,11 +22,11 @@ R350|0||                                         (success - registered with WAN)
 R350|50000008||Invalid token                     (error - bad owner token)
 ```
 
-## SET
+### SET
 
 Configure WAN parameters.
 
-### PUBLIC PORTS
+#### PUBLIC PORTS
 
 Set public TLS and UDP ports for WAN access.
 
@@ -45,7 +43,7 @@ C[D]<seq_number>|wan set public_tls_port=<port> public_udp_port=<port>
 C351|wan set public_tls_port=4993 public_udp_port=4991
 ```
 
-## UNREGISTER
+### UNREGISTER
 
 Unregister radio from WAN service.
 
@@ -61,7 +59,7 @@ C[D]<seq_number>|wan unregister owner_token=<token>
 C352|wan unregister owner_token=abc123def456
 ```
 
-## VALIDATE
+### VALIDATE
 
 Validate WAN connection.
 

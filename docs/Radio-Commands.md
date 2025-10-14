@@ -1,8 +1,6 @@
-# Radio Commands
-
 Radio commands control global radio settings and configuration parameters.
 
-## BACKLIGHT
+### BACKLIGHT
 
 Set radio display backlight level.
 
@@ -23,7 +21,7 @@ C10|radio backlight 75
 R10|0||                                          (success - backlight set)
 ```
 
-## CALLSIGN
+### CALLSIGN
 
 Set radio callsign.
 
@@ -44,7 +42,7 @@ C11|radio callsign W1AW
 R11|0||                                          (success - callsign set)
 ```
 
-## FILTER_SHARPNESS
+### FILTER_SHARPNESS
 
 Set filter sharpness for different modes.
 
@@ -67,23 +65,23 @@ C12|radio filter_sharpness voice level=2 auto_level=1
 R12|0||                                          (success - filter sharpness set)
 ```
 
-## GPS
+### GPS
 
 Control GPS module installation.
 
-### INSTALL
+#### INSTALL
 Install GPS module.
 ```
 C[D]<seq_number>|radio gps install
 ```
 
-### UNINSTALL
+#### UNINSTALL
 Uninstall GPS module.
 ```
 C[D]<seq_number>|radio gps uninstall
 ```
 
-## NAME
+### NAME
 
 Set radio name.
 
@@ -104,7 +102,7 @@ C13|radio name FlexRadio-6700
 R13|0||                                          (success - radio name set)
 ```
 
-## OSCILLATOR
+### OSCILLATOR
 
 Set oscillator type.
 
@@ -125,7 +123,7 @@ C14|radio oscillator TCXO
 R14|0||                                          (success - oscillator set)
 ```
 
-## PLL_START
+### PLL_START
 
 Start PLL calibration.
 
@@ -143,7 +141,7 @@ C15|radio pll_start
 R15|0||                                          (success - PLL started)
 ```
 
-## REBOOT
+### REBOOT
 
 Reboot the radio.
 
@@ -161,7 +159,7 @@ C16|radio reboot
 R16|0||                                          (success - radio rebooting)
 ```
 
-## SCREENSAVER
+### SCREENSAVER
 
 Set screensaver mode.
 
@@ -182,7 +180,7 @@ C17|radio screensaver off
 R17|0||                                          (success - screensaver disabled)
 ```
 
-## SET
+### SET
 
 Configure various radio parameters. All set commands follow the pattern:
 
@@ -212,11 +210,11 @@ C21|radio set cal_freq=10.000000
 C22|radio set mf_enable=1
 ```
 
-## STATIC_NET_PARAMS
+### STATIC_NET_PARAMS
 
 Configure static network parameters or reset to DHCP.
 
-### SET STATIC PARAMETERS
+#### SET STATIC PARAMETERS
 Set static IP configuration.
 ```
 C[D]<seq_number>|radio static_net_params ip=<ip_address> gateway=<gateway_ip> netmask=<netmask>
@@ -232,7 +230,7 @@ C[D]<seq_number>|radio static_net_params ip=<ip_address> gateway=<gateway_ip> ne
 C18|radio static_net_params ip=192.168.1.100 gateway=192.168.1.1 netmask=255.255.255.0
 ```
 
-### RESET TO DHCP
+#### RESET TO DHCP
 Reset network configuration to DHCP.
 ```
 C[D]<seq_number>|radio static_net_params reset

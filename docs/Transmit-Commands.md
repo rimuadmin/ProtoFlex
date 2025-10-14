@@ -1,8 +1,6 @@
-# Transmit Commands
-
 Transmit commands control RF power output, audio processing, and transmission parameters.
 
-## SET
+### SET
 
 Configure various transmit parameters. All set commands follow the pattern:
 
@@ -57,7 +55,7 @@ R83|0||                                          (success - filter range set)
 R84|0||                                          (success - speech processor enabled)
 ```
 
-## TUNE
+### TUNE
 
 Enable/disable tune mode.
 

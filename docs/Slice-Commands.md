@@ -1,8 +1,6 @@
-# Slice Commands
-
 Slice commands control receiver slices in the FlexRadio. Each slice represents an independent receiver that can be tuned to different frequencies and configured with different parameters.
 
-## CREATE
+### CREATE
 
 Create a new slice receiver.
 
@@ -29,7 +27,7 @@ R21|0|2|slice created on 14.230000 MHz on ANT1    (success - slice index 2)
 R21|50000001||Unable to create slice               (error - no receivers available)
 ```
 
-## CREATE (Clone)
+### CREATE (Clone)
 
 Create a cloned slice from an existing slice.
 
@@ -52,7 +50,7 @@ R22|0|3|cloned slice created                       (success - slice index 3)
 R22|50000004||Invalid source slice                 (error - source slice doesn't exist)
 ```
 
-## LOCK
+### LOCK
 
 Lock a slice frequency to prevent tuning changes.
 
@@ -73,7 +71,7 @@ C23|slice lock 0
 R23|0||                                          (success - slice locked)
 ```
 
-## REMOVE
+### REMOVE
 
 Remove a slice receiver.
 
@@ -95,7 +93,7 @@ R24|0||                                          (success - slice removed)
 R24|50000014||Slice not found                    (error - slice doesn't exist)
 ```
 
-## SET
+### SET
 
 Configure various slice parameters. All set commands follow the pattern:
 
@@ -165,7 +163,7 @@ C28|slice set 0 agc_mode=fast
 C29|slice set 0 rxant=ANT1
 ```
 
-## TUNE
+### TUNE
 
 Tune a slice to a specific frequency.
 
@@ -189,7 +187,7 @@ R25|0|14.230000|                                  (success - actual frequency se
 R25|50000004||Invalid frequency                   (error - frequency out of range)
 ```
 
-## UNLOCK
+### UNLOCK
 
 Unlock a slice frequency to allow tuning changes.
 
