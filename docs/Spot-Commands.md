@@ -1,0 +1,48 @@
+
+## Spot Commands
+
+Spot commands manage DX cluster spots and spotting functionality.
+
+## ADD
+
+Add a new spot to the display.
+
+```
+C[D]<seq_number>|spot add callsign=<call> rx_freq=<MHz> [tx_freq=<MHz>] [mode=<mode>] [color=<color>] [etc.]
+```
+
+**Parameters:**
+- `<call>` = callsign of spotted station
+- `<MHz>` = receive frequency in MHz
+- `tx_freq=<MHz>` = optional transmit frequency
+- `mode=<mode>` = optional mode (USB, LSB, CW, etc.)
+- `color=<color>` = optional spot color
+- Additional optional parameters may be available
+
+**Example:**
+```
+C340|spot add callsign=W1AW rx_freq=14.230 mode=CW color=red
+```
+
+**Response:**
+```
+R340|0|spot_id=12345|                           (success - returns spot ID)
+```
+
+## CLEAR
+
+Clear all spots from the display.
+
+```
+C[D]<seq_number>|spot clear
+```
+
+**Example:**
+```
+C341|spot clear
+```
+
+**Response:**
+```
+R341|0||                                         (success - all spots cleared)
+```
