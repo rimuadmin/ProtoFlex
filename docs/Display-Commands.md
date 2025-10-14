@@ -1,5 +1,3 @@
-# Display Commands
-
 Display commands control panadapter and waterfall display parameters and settings.
 
 ## Panadapter Commands
