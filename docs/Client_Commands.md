@@ -1,8 +1,6 @@
-# Client Commands
-
 Client commands manage client connections and configurations for controlling the FlexRadio.
 
-## BIND
+### BIND
 
 Bind to a GUI client session.
 
@@ -24,7 +22,7 @@ R30|0||                                          (success - client bound)
 R30|50000002||Invalid client ID                  (error - client ID not found)
 ```
 
-## DISCONNECT
+### DISCONNECT
 
 Disconnect client from radio.
 
@@ -42,7 +40,7 @@ C31|client disconnect
 R31|0||                                          (success - client disconnected)
 ```
 
-## GUI
+### GUI
 
 Get or set GUI client information.
 
@@ -60,7 +58,7 @@ C32|client gui
 R32|0|client_id=0x12345678 program=SmartSDR station=Station1|  (success - returns GUI client info)
 ```
 
-## IP
+### IP
 
 Get client IP information.
 
@@ -78,7 +76,7 @@ C33|client ip
 R33|0|192.168.1.100|                            (success - returns client IP)
 ```
 
-## LOW_BW_CONNECT
+### LOW_BW_CONNECT
 
 Enable low bandwidth connection mode.
 
@@ -91,7 +89,7 @@ C[D]<seq_number>|client low_bw_connect
 C34|client low_bw_connect
 ```
 
-## PROGRAM
+### PROGRAM
 
 Set client program name.
 
@@ -112,7 +110,7 @@ C35|client program SmartSDR
 R35|0||                                          (success - program name set)
 ```
 
-## SET
+### SET
 
 Configure various client parameters. All set commands follow the pattern:
 
@@ -136,7 +134,7 @@ C37|client set send_reduced_bw_dax=0
 C38|client set enforce_network_mtu=1 network_mtu=1500
 ```
 
-## START_PERSISTENCE
+### START_PERSISTENCE
 
 Control persistence settings.
 
@@ -149,7 +147,7 @@ C[D]<seq_number>|client start_persistence off
 C39|client start_persistence off
 ```
 
-## STATION
+### STATION
 
 Set station name.
 
@@ -165,7 +163,7 @@ C[D]<seq_number>|client station <station_name>
 C40|client station HomeStation
 ```
 
-## UDPPORT
+### UDPPORT
 
 Set client UDP port.
 

@@ -1,5 +1,3 @@
-## Mixer Commands
-
 Mixer commands control audio routing and levels.
 
 ### FRONT_SPEAKER

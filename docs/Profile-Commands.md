@@ -1,8 +1,6 @@
-# Profile Commands
-
 Profile commands manage radio configuration profiles for different operating scenarios.
 
-## AUTOSAVE
+### AUTOSAVE
 
 Control automatic profile saving.
 
@@ -18,11 +16,11 @@ C[D]<seq_number>|profile autosave <on|off>
 C320|profile autosave on
 ```
 
-## DISPLAY
+### DISPLAY
 
 Manage display profiles.
 
-### LOAD
+#### LOAD
 
 Load a display profile.
 
@@ -38,7 +36,7 @@ C[D]<seq_number>|profile display load "<name>"
 C321|profile display load "Contest Setup"
 ```
 
-### INFO
+#### INFO
 
 Get display profile information.
 
@@ -54,11 +52,11 @@ C[D]<seq_number>|profile display info "<name>"
 C322|profile display info "Contest Setup"
 ```
 
-## GLOBAL
+#### GLOBAL
 
 Manage global profiles.
 
-### SAVE
+#### SAVE
 
 Save a global profile.
 
@@ -74,7 +72,7 @@ C[D]<seq_number>|profile global save "<name>"
 C323|profile global save "DX Configuration"
 ```
 
-### DELETE
+#### DELETE
 
 Delete a global profile.
 
@@ -90,7 +88,7 @@ C[D]<seq_number>|profile global delete "<name>"
 C324|profile global delete "Old Configuration"
 ```
 
-### LOAD
+#### LOAD
 
 Load a global profile.
 
@@ -106,7 +104,7 @@ C[D]<seq_number>|profile global load "<name>"
 C325|profile global load "DX Configuration"
 ```
 
-### INFO
+#### INFO
 
 Get global profile information.
 
@@ -122,11 +120,11 @@ C[D]<seq_number>|profile global info "<name>"
 C326|profile global info "DX Configuration"
 ```
 
-## MIC
+### MIC
 
 Manage microphone profiles.
 
-### SAVE
+#### SAVE
 
 Save a microphone profile.
 
@@ -142,7 +140,7 @@ C[D]<seq_number>|profile mic save "<name>"
 C327|profile mic save "Contest Mic"
 ```
 
-### CREATE
+#### CREATE
 
 Create a new microphone profile.
 
@@ -158,7 +156,7 @@ C[D]<seq_number>|profile mic create "<name>"
 C328|profile mic create "New Mic Setup"
 ```
 
-### RESET
+#### RESET
 
 Reset microphone profile to defaults.
 
@@ -174,7 +172,7 @@ C[D]<seq_number>|profile mic reset "<name>"
 C329|profile mic reset "Contest Mic"
 ```
 
-### DELETE
+#### DELETE
 
 Delete a microphone profile.
 
@@ -190,7 +188,7 @@ C[D]<seq_number>|profile mic delete "<name>"
 C330|profile mic delete "Old Mic Setup"
 ```
 
-### LOAD
+#### LOAD
 
 Load a microphone profile.
 
@@ -206,11 +204,11 @@ C[D]<seq_number>|profile mic load "<name>"
 C331|profile mic load "Contest Mic"
 ```
 
-## TRANSMIT
+### TRANSMIT
 
 Manage transmit profiles.
 
-### SAVE
+#### SAVE
 
 Save a transmit profile.
 
@@ -226,7 +224,7 @@ C[D]<seq_number>|profile transmit save "<name>"
 C332|profile transmit save "High Power"
 ```
 
-### CREATE
+#### CREATE
 
 Create a new transmit profile.
 
@@ -242,7 +240,7 @@ C[D]<seq_number>|profile transmit create "<name>"
 C333|profile transmit create "QRP Setup"
 ```
 
-### RESET
+#### RESET
 
 Reset transmit profile to defaults.
 
@@ -258,7 +256,7 @@ C[D]<seq_number>|profile transmit reset "<name>"
 C334|profile transmit reset "High Power"
 ```
 
-### DELETE
+#### DELETE
 
 Delete a transmit profile.
 
@@ -274,11 +272,11 @@ C[D]<seq_number>|profile transmit delete "<name>"
 C335|profile transmit delete "Old Setup"
 ```
 
-## TX
+### TX
 
 Additional transmit profile operations.
 
-### LOAD
+#### LOAD
 
 Load a TX profile.
 
@@ -294,7 +292,7 @@ C[D]<seq_number>|profile tx load "<name>"
 C336|profile tx load "Contest TX"
 ```
 
-### INFO
+#### INFO
 
 Get TX profile information.
 

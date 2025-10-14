@@ -1,8 +1,6 @@
-# Microphone Commands
-
 Microphone commands control microphone input settings and parameters.
 
-## ACC
+### ACC
 
 Set ACC (Accessory) input.
 
@@ -23,7 +21,7 @@ C300|mic acc 0
 R300|0||                                         (success - ACC disabled)
 ```
 
-## BIAS
+### BIAS
 
 Enable/disable microphone bias voltage.
 
@@ -44,7 +42,7 @@ C301|mic bias 1
 R301|0||                                         (success - mic bias enabled)
 ```
 
-## BOOST
+### BOOST
 
 Enable/disable microphone boost.
 
@@ -65,7 +63,7 @@ C302|mic boost 0
 R302|0||                                         (success - mic boost disabled)
 ```
 
-## INPUT
+### INPUT
 
 Set microphone input source.
 
@@ -81,7 +79,7 @@ C[D]<seq_number>|mic input <input_name>
 C303|mic input MIC
 ```
 
-## LIST
+### LIST
 
 Get list of available microphone inputs.
 

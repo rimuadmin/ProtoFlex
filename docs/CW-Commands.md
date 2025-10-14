@@ -1,8 +1,6 @@
-# CW Commands
-
 CW commands control Morse code keying and parameters. 
 
-## BREAK_IN
+### BREAK_IN
 
 Enable/disable CW break-in (QSK).
 
@@ -23,7 +21,7 @@ C50|cw break_in 1
 R50|0||                                          (success - break-in enabled)
 ```
 
-## BREAK_IN_DELAY
+### BREAK_IN_DELAY
 
 Set CW break-in delay in milliseconds.
 
@@ -44,7 +42,7 @@ C51|cw break_in_delay 100
 R51|0||                                          (success - break-in delay set)
 ```
 
-## CWL_ENABLED
+### CWL_ENABLED
 
 Enable/disable CWL (CW Learning).
 
@@ -65,7 +63,7 @@ C52|cw cwl_enabled 0
 R52|0||                                          (success - CWL disabled)
 ```
 
-## IAMBIC
+### IAMBIC
 
 Enable/disable iambic keyer.
 
@@ -81,7 +79,7 @@ C[D]<seq_number>|cw iambic <0|1>
 C53|cw iambic 1
 ```
 
-## KEY
+### KEY
 
 Control CW key state.
 
@@ -100,7 +98,7 @@ C[D]<seq_number>|cw key <0|1> time=<timestamp> index=<n> client_handle=<handle>
 C54|cw key 1 time=1234567890 index=0 client_handle=0x12345678
 ```
 
-## KEY IMMEDIATE
+### KEY IMMEDIATE
 
 Immediate CW key control.
 
@@ -116,7 +114,7 @@ C[D]<seq_number>|cw key immediate <0|1>
 C55|cw key immediate 1
 ```
 
-## MODE
+### MODE
 
 Set iambic keyer mode.
 
@@ -132,7 +130,7 @@ C[D]<seq_number>|cw mode <0|1>
 C56|cw mode 1
 ```
 
-## PITCH
+### PITCH
 
 Set CW sidetone pitch.
 
@@ -153,7 +151,7 @@ C57|cw pitch 600
 R57|0||                                          (success - CW pitch set)
 ```
 
-## PTT
+### PTT
 
 Control CW PTT state.
 
@@ -172,7 +170,7 @@ C[D]<seq_number>|cw ptt <0|1> time=<timestamp> index=<n> client_handle=<handle>
 C58|cw ptt 1 time=1234567890 index=0 client_handle=0x12345678
 ```
 
-## SIDETONE
+### SIDETONE
 
 Enable/disable CW sidetone.
 
@@ -188,7 +186,7 @@ C[D]<seq_number>|cw sidetone <0|1>
 C59|cw sidetone 1
 ```
 
-## SWAP
+### SWAP
 
 Swap paddle configuration (dit/dah).
 
@@ -204,7 +202,7 @@ C[D]<seq_number>|cw swap <0|1>
 C60|cw swap 0
 ```
 
-## SYNCCWX
+### SYNCCWX
 
 Synchronize CWX buffer.
 
@@ -220,7 +218,7 @@ C[D]<seq_number>|cw synccwx <0|1>
 C61|cw synccwx 1
 ```
 
-## WPM
+### WPM
 
 Set CW speed in words per minute.
 
