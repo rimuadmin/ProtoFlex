@@ -17,8 +17,11 @@ This documentation provides comprehensive reference for all FlexRadio API comman
 - [**WAN Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/WAN-Commands) - Wide Area Network remote access
 
 ### Audio and CW
-- [**CW Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/CW-Commands) - Morse code keying and CWX text buffer operations
-- [**Audio and Profile Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Audio-Profile-Commands) - Microphone, mixer, and profile management
+- [**CW Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/CW-Commands) - Morse code keying
+- [**CWX Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/CWX-Commands) - CWX text buffer operations
+- [**Microphone Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Mic-Commands) - Microphone management
+- [**Mixer Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Mixer-Commands) - Mixer management
+- [**Profile Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Profile-Commands) - Profile management
 
 ### Display and Data
 - [**Display Commands**](https://github.com/rimuadmin/ProtoFlex/wiki/Display-Commands) - Panadapter and waterfall display control

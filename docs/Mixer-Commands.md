@@ -1,0 +1,95 @@
+## Mixer Commands
+
+Mixer commands control audio routing and levels.
+
+### FRONT_SPEAKER
+
+Control front speaker settings.
+
+#### MUTE
+
+Mute/unmute front speaker.
+
+```
+C[D]<seq_number>|mixer front_speaker mute <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = unmute/mute
+
+**Example:**
+```
+C310|mixer front_speaker mute 0
+```
+
+### HEADPHONE
+
+Control headphone settings.
+
+#### GAIN
+
+Set headphone gain level.
+
+```
+C[D]<seq_number>|mixer headphone gain <0-100>
+```
+
+**Parameters:**
+- `<0-100>` = gain level percentage
+
+**Example:**
+```
+C311|mixer headphone gain 75
+```
+
+#### MUTE
+
+Mute/unmute headphones.
+
+```
+C[D]<seq_number>|mixer headphone mute <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = unmute/mute
+
+**Example:**
+```
+C312|mixer headphone mute 0
+```
+
+### LINEOUT
+
+Control line output settings.
+
+#### GAIN
+
+Set line output gain level.
+
+```
+C[D]<seq_number>|mixer lineout gain <0-100>
+```
+
+**Parameters:**
+- `<0-100>` = gain level percentage
+
+**Example:**
+```
+C313|mixer lineout gain 50
+```
+
+#### MUTE
+
+Mute/unmute line output.
+
+```
+C[D]<seq_number>|mixer lineout mute <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = unmute/mute
+
+**Example:**
+```
+C314|mixer lineout mute 0
+```

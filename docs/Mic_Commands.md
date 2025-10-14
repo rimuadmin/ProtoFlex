@@ -1,0 +1,101 @@
+# Microphone Commands
+
+Microphone commands control microphone input settings and parameters.
+
+## ACC
+
+Set ACC (Accessory) input.
+
+```
+C[D]<seq_number>|mic acc <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable ACC input
+
+**Example:**
+```
+C300|mic acc 0
+```
+
+**Response:**
+```
+R300|0||                                         (success - ACC disabled)
+```
+
+## BIAS
+
+Enable/disable microphone bias voltage.
+
+```
+C[D]<seq_number>|mic bias <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable mic bias
+
+**Example:**
+```
+C301|mic bias 1
+```
+
+**Response:**
+```
+R301|0||                                         (success - mic bias enabled)
+```
+
+## BOOST
+
+Enable/disable microphone boost.
+
+```
+C[D]<seq_number>|mic boost <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable mic boost
+
+**Example:**
+```
+C302|mic boost 0
+```
+
+**Response:**
+```
+R302|0||                                         (success - mic boost disabled)
+```
+
+## INPUT
+
+Set microphone input source.
+
+```
+C[D]<seq_number>|mic input <input_name>
+```
+
+**Parameters:**
+- `<input_name>` = microphone input designation
+
+**Example:**
+```
+C303|mic input MIC
+```
+
+## LIST
+
+Get list of available microphone inputs.
+
+```
+C[D]<seq_number>|mic list
+```
+
+**Example:**
+```
+C304|mic list
+```
+
+**Response:**
+```
+R304|0|MIC ACC BAL LINE|                         (success - returns available mic inputs)
+```
+
