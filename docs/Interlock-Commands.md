@@ -1,5 +1,3 @@
-# Interlock Commands
-
 Configure transmit interlock parameters.
 
 ```

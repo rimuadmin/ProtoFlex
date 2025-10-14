@@ -1,6 +1,4 @@
-# Meter Commands
-
-## LIST
+### LIST
 
 Get list of available meters.
 

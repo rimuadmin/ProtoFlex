@@ -1,6 +1,4 @@
-# Filter Commands
-
-## SET BANDWIDTH
+### SET BANDWIDTH
 
 Set slice filter bandwidth.
 

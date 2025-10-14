@@ -1,6 +1,4 @@
-# Waveform Commands
-
-## UNINSTALL
+### UNINSTALL
 
 Uninstall waveform.
 

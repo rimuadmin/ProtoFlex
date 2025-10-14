@@ -1,6 +1,4 @@
-# MOX Commands
-
-## XMIT
+### XMIT
 
 Enable/disable MOX (Manual On/Off).
 

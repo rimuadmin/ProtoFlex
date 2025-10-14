@@ -1,8 +1,6 @@
-# ATU Commands
-
 Antenna Tuning Unit commands for automatic antenna matching.
 
-## BYPASS
+### BYPASS
 
 Set ATU to bypass mode.
 
@@ -20,7 +18,7 @@ C151|atu bypass
 R151|0||                                         (success - ATU bypassed)
 ```
 
-## CLEAR
+### CLEAR
 
 Clear ATU memories.
 
@@ -38,7 +36,7 @@ C152|atu clear
 R152|0||                                         (success - ATU memories cleared)
 ```
 
-## SET
+### SET
 
 Configure ATU parameters.
 
@@ -54,7 +52,7 @@ C[D]<seq_number>|atu set memories_enabled=<0|1>
 C153|atu set memories_enabled=1
 ```
 
-## START
+### START
 
 Start ATU tuning process.
 

@@ -1,6 +1,4 @@
-# Antenna Commands
-
-## LIST
+### LIST
 
 Get list of available antenna ports.
 

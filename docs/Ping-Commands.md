@@ -1,10 +1,8 @@
-# Ping Commands
-
-## PING
+### PING
 
 Send ping to radio.
 
-### WITH TIMESTAMP
+#### WITH TIMESTAMP
 
 Send ping with timestamp.
 
@@ -25,7 +23,7 @@ C240|ping ms_timestamp=1234567890
 R240|0|pong ms_timestamp=1234567890|             (success - returns ping with timestamp)
 ```
 
-### WITHOUT TIMESTAMP
+#### WITHOUT TIMESTAMP
 
 Send simple ping.
 

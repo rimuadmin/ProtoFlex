@@ -1,9 +1,7 @@
 
-# CWX Commands
-
 CWX commands manage the CW text buffer for automated CW transmission.
 
-## ERASE
+### ERASE
 
 Erase characters from the CW buffer.
 
@@ -21,7 +19,7 @@ C70|cwx erase 5
 C71|cwx erase 3 1
 ```
 
-## INSERT
+### INSERT
 
 Insert text into the CW buffer at a specific position.
 
@@ -39,7 +37,7 @@ C[D]<seq_number>|cwx insert <radio_index> "<message>" <block>
 C72|cwx insert 1 "CQ CQ DE W1AW" 0
 ```
 
-## MACRO SEND
+### MACRO SEND
 
 Send a stored CW macro by index.
 
@@ -55,7 +53,7 @@ C[D]<seq_number>|cwx macro send <index>
 C73|cwx macro send 1
 ```
 
-## SEND
+### SEND
 
 Send CW text message.
 

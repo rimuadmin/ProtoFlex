@@ -1,6 +1,4 @@
-# Memory Commands
-
-## CREATE
+### CREATE
 
 Create memory channel.
 

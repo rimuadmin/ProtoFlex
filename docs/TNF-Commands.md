@@ -1,8 +1,6 @@
-# TNF Commands
-
 Tracking Notch Filter commands.
 
-## CREATE
+### CREATE
 
 Create TNF.
 

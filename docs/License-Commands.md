@@ -1,6 +1,4 @@
-# License Commands
-
-## REFRESH
+### REFRESH
 
 Refresh radio license.
 

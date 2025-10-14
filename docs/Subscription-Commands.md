@@ -1,6 +1,4 @@
-# Subscription Commands
-
-## SUB
+### SUB
 
 Subscribe to status updates.
 
@@ -16,7 +14,7 @@ C[D]<seq_number>|sub <category> all
 C250|sub slice all
 ```
 
-## UNSUB
+### UNSUB
 
 Unsubscribe from status updates.
 
