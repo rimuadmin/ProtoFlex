@@ -7,3 +7,4 @@
 * [Logging](https://github.com/rimuadmin/ProtoFlex/wiki/Logging)
 * [Limitations](https://github.com/rimuadmin/ProtoFlex/wiki/Limitations)
 * [Supported Commands](https://github.com/rimuadmin/ProtoFlex/wiki/Supported-TCP-Commands)
+* [FlexRadio Commands](https://github.com/rimuadmin/ProtoFlex/wiki/Command-Index)

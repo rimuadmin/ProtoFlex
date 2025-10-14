@@ -1,0 +1,182 @@
+# Client Commands
+
+Client commands manage client connections and configurations for controlling the FlexRadio.
+
+## BIND
+
+Bind to a GUI client session.
+
+```
+C[D]<seq_number>|client bind client_id=<id>
+```
+
+**Parameters:**
+- `<id>` = client identifier
+
+**Example:**
+```
+C30|client bind client_id=0x12345678
+```
+
+**Response:**
+```
+R30|0||                                          (success - client bound)
+R30|50000002||Invalid client ID                  (error - client ID not found)
+```
+
+## DISCONNECT
+
+Disconnect client from radio.
+
+```
+C[D]<seq_number>|client disconnect
+```
+
+**Example:**
+```
+C31|client disconnect
+```
+
+**Response:**
+```
+R31|0||                                          (success - client disconnected)
+```
+
+## GUI
+
+Get or set GUI client information.
+
+```
+C[D]<seq_number>|client gui
+```
+
+**Example:**
+```
+C32|client gui
+```
+
+**Response:**
+```
+R32|0|client_id=0x12345678 program=SmartSDR station=Station1|  (success - returns GUI client info)
+```
+
+## IP
+
+Get client IP information.
+
+```
+C[D]<seq_number>|client ip
+```
+
+**Example:**
+```
+C33|client ip
+```
+
+**Response:**
+```
+R33|0|192.168.1.100|                            (success - returns client IP)
+```
+
+## LOW_BW_CONNECT
+
+Enable low bandwidth connection mode.
+
+```
+C[D]<seq_number>|client low_bw_connect
+```
+
+**Example:**
+```
+C34|client low_bw_connect
+```
+
+## PROGRAM
+
+Set client program name.
+
+```
+C[D]<seq_number>|client program <program_name>
+```
+
+**Parameters:**
+- `<program_name>` = name of the client application
+
+**Example:**
+```
+C35|client program SmartSDR
+```
+
+**Response:**
+```
+R35|0||                                          (success - program name set)
+```
+
+## SET
+
+Configure various client parameters. All set commands follow the pattern:
+
+```
+C[D]<seq_number>|client set <parameter>=<value> [additional_parameters]
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `local_ptt` | `0\|1` | Disable/enable local PTT control |
+| `send_reduced_bw_dax` | `0\|1` | Disable/enable reduced bandwidth DAX transmission |
+| `enforce_network_mtu` | `0\|1` | Disable/enable network MTU enforcement |
+| `network_mtu` | `mtu_size` | Set Maximum Transmission Unit size (used with enforce_network_mtu) |
+
+**Examples:**
+```
+C36|client set local_ptt=1
+C37|client set send_reduced_bw_dax=0
+C38|client set enforce_network_mtu=1 network_mtu=1500
+```
+
+## START_PERSISTENCE
+
+Control persistence settings.
+
+```
+C[D]<seq_number>|client start_persistence off
+```
+
+**Example:**
+```
+C39|client start_persistence off
+```
+
+## STATION
+
+Set station name.
+
+```
+C[D]<seq_number>|client station <station_name>
+```
+
+**Parameters:**
+- `<station_name>` = name of the station
+
+**Example:**
+```
+C40|client station HomeStation
+```
+
+## UDPPORT
+
+Set client UDP port.
+
+```
+C[D]<seq_number>|client udpport <port>
+```
+
+**Parameters:**
+- `<port>` = UDP port number
+
+**Example:**
+```
+C41|client udpport 4991
+```

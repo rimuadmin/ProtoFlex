@@ -1,0 +1,124 @@
+# Display Commands
+
+Display commands control panadapter and waterfall display parameters and settings.
+
+## Panadapter Commands
+
+Panadapter commands control the spectrum display settings.
+
+### PAN RFGAIN_INFO
+
+Get RF gain information for a panadapter.
+
+```
+C[D]<seq_number>|display pan rfgain_info <stream_id>
+```
+
+**Parameters:**
+- `<stream_id>` = panadapter stream ID (hexadecimal format: 0x40000000)
+
+**Example:**
+```
+C110|display pan rfgain_info 0x40000000
+```
+
+**Response:**
+```
+R110|0|0x40000000 pre_amp=Low post_amp=None|    (success - returns RF gain info)
+```
+
+### PAN SET
+
+Set various panadapter parameters.
+
+```
+C[D]<seq_number>|display pan set <stream_id> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `center` | `MHz` | Set panadapter center frequency |
+| `max_dbm` | `dBm_level` | Set panadapter maximum dBm display level |
+| `min_dbm` | `dBm_level` | Set panadapter minimum dBm display level |
+
+**Parameters:**
+- `<stream_id>` = panadapter stream ID (hexadecimal format: 0x40000000)
+
+**Examples:**
+```
+C111|display pan set 0x40000000 center=14.200000
+C112|display pan set 0x40000000 max_dbm=-10.0
+C113|display pan set 0x40000000 min_dbm=-140.0
+```
+
+**Responses:**
+```
+R111|0||                                         (success - center frequency set)
+R112|0||                                         (success - max dBm level set)
+R113|0||                                         (success - min dBm level set)
+```
+
+## Waterfall Commands
+
+Waterfall commands control the waterfall display settings (panafall).
+
+### PANAFALL CREATE
+
+Create a waterfall display.
+
+```
+C[D]<seq_number>|display panafall create x=<x> y=<y>
+```
+
+**Parameters:**
+- `<x>` = horizontal position
+- `<y>` = vertical position
+
+**Example:**
+```
+C120|display panafall create x=50 y=300
+```
+
+### PANAFALL RFGAIN_INFO
+
+Get RF gain information for a waterfall.
+
+```
+C[D]<seq_number>|display panafall rfgain_info <stream_id>
+```
+
+**Parameters:**
+- `<stream_id>` = waterfall stream ID
+
+**Example:**
+```
+C121|display panafall rfgain_info 0x84000000
+```
+
+### PANAFALL SET
+
+Set various waterfall parameters.
+
+```
+C[D]<seq_number>|display panafall set <stream_id> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `band` | `band_designation` | Set waterfall band |
+| `max_dbm` | `dBm_level` | Set waterfall maximum dBm display level |
+| `min_dbm` | `dBm_level` | Set waterfall minimum dBm display level |
+
+**Parameters:**
+- `<stream_id>` = waterfall stream ID
+
+**Examples:**
+```
+C122|display panafall set 0x84000000 band=20
+C123|display panafall set 0x84000000 max_dbm=-10.0
+C124|display panafall set 0x84000000 min_dbm=-140.0
+```

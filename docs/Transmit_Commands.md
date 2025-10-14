@@ -1,0 +1,74 @@
+# Transmit Commands
+
+Transmit commands control RF power output, audio processing, and transmission parameters.
+
+## SET
+
+Configure various transmit parameters. All set commands follow the pattern:
+
+```
+C[D]<seq_number>|transmit set <parameter>=<value> [additional_parameters]
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `am_carrier` | `0-100` | Set AM carrier level percentage |
+| `compander` | `0\|1` | Enable/disable compander |
+| `compander_level` | `0-100` | Set compander level percentage |
+| `dax` | `0\|1` | Enable/disable transmit DAX |
+| `filter_low` | `Hz` | Set transmit filter low cut frequency (use with filter_high) |
+| `filter_high` | `Hz` | Set transmit filter high cut frequency (use with filter_low) |
+| `hwalc_enabled` | `0\|1` | Enable/disable hardware ALC |
+| `inhibit` | `0\|1` | Enable/disable transmit inhibit |
+| `max_power_level` | `0-100` | Set maximum power level percentage |
+| `met_in_rx` | `0\|1` | Enable/disable meter display in RX mode |
+| `miclevel` | `0-100` | Set microphone level percentage |
+| `mon` | `0\|1` | Enable/disable transmit monitor |
+| `mon_gain_cw` | `0-100` | Set CW monitor gain percentage |
+| `mon_gain_sb` | `0-100` | Set sideband monitor gain percentage |
+| `mon_pan_cw` | `0-100` | Set CW monitor pan position (50=center) |
+| `mon_pan_sb` | `0-100` | Set sideband monitor pan position (50=center) |
+| `rfpower` | `0-100` | Set RF power level percentage |
+| `show_tx_in_waterfall` | `0\|1` | Show/hide transmit signal in waterfall display |
+| `speech_processor_enable` | `0\|1` | Enable/disable speech processor |
+| `speech_processor_level` | `0-100` | Set speech processor level percentage |
+| `tunepower` | `0-100` | Set tune power level percentage |
+| `vox_delay` | `0-100` | Set VOX delay time |
+| `vox_enable` | `0\|1` | Enable/disable VOX |
+| `vox_level` | `0-100` | Set VOX level percentage |
+
+**Examples:**
+```
+C80|transmit set am_carrier=25
+C81|transmit set compander=1
+C82|transmit set rfpower=50
+C83|transmit set filter_low=100 filter_high=3000
+C84|transmit set speech_processor_enable=1
+```
+
+**Responses:**
+```
+R80|0||                                          (success - AM carrier set)
+R81|0||                                          (success - compander enabled)
+R82|0||                                          (success - RF power set)
+R83|0||                                          (success - filter range set)
+R84|0||                                          (success - speech processor enabled)
+```
+
+## TUNE
+
+Enable/disable tune mode.
+
+```
+C[D]<seq_number>|transmit tune <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable tune mode
+
+**Example:**
+```
+C103|transmit tune 1
+```

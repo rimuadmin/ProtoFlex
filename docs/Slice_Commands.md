@@ -1,0 +1,206 @@
+# Slice Commands
+
+Slice commands control receiver slices in the FlexRadio. Each slice represents an independent receiver that can be tuned to different frequencies and configured with different parameters.
+
+## CREATE
+
+Create a new slice receiver.
+
+```
+C[D]<seq_number>|slice create [freq=<MHz>][pan=<streamID>][rxant=<antenna_port>][mode=<mode>][load_from=<source>][clone_slice=<index>]
+```
+
+**Parameters:**
+- `<MHz>` = frequency in MHz, up to 15 significant digits
+- `<streamID>` = stream identification for panadapter association
+- `<antenna_port>` = antenna designator: ANT1, ANT2, RXA, RXB, or XVTR
+- `<mode>` = alphanumeric mode designator: USB, LSB, CW, AM, FM, etc.
+- `<source>` = PERSISTENCE or clone
+- `<index>` = slice index to clone from
+
+**Example:**
+```
+C21|slice create freq=14.230 pan=0x40000000 rxant=ANT1 mode=USB
+```
+
+**Response:**
+```
+R21|0|2|slice created on 14.230000 MHz on ANT1    (success - slice index 2)
+R21|50000001||Unable to create slice               (error - no receivers available)
+```
+
+## CREATE (Clone)
+
+Create a cloned slice from an existing slice.
+
+```
+C[D]<seq_number>|slice create clone_slice=<slice_index> pan=<streamID> load_from=clone
+```
+
+**Parameters:**
+- `<slice_index>` = index of the slice to clone
+- `<streamID>` = stream identification for panadapter association
+
+**Example:**
+```
+C22|slice create clone_slice=0 pan=0x40000001 load_from=clone
+```
+
+**Response:**
+```
+R22|0|3|cloned slice created                       (success - slice index 3)
+R22|50000004||Invalid source slice                 (error - source slice doesn't exist)
+```
+
+## LOCK
+
+Lock a slice frequency to prevent tuning changes.
+
+```
+C[D]<seq_number>|slice lock <slice_index>
+```
+
+**Parameters:**
+- `<slice_index>` = slice number to lock
+
+**Example:**
+```
+C23|slice lock 0
+```
+
+**Response:**
+```
+R23|0||                                          (success - slice locked)
+```
+
+## REMOVE
+
+Remove a slice receiver.
+
+```
+C[D]<seq_number>|slice remove <slice_index>
+```
+
+**Parameters:**
+- `<slice_index>` = slice number to remove
+
+**Example:**
+```
+C24|slice remove 0
+```
+
+**Response:**
+```
+R24|0||                                          (success - slice removed)
+R24|50000014||Slice not found                    (error - slice doesn't exist)
+```
+
+## SET
+
+Configure various slice parameters. All set commands follow the pattern:
+
+```
+C[D]<seq_number>|slice set <slice_index> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `active` | `0\|1` | Set slice as active slice |
+| `agc_mode` | `off\|slow\|med\|fast` | Set AGC mode |
+| `agc_off_level` | `0-100` | Set AGC off level |
+| `agc_threshold` | `0-100` | Set AGC threshold |
+| `anf` | `0\|1` | Enable/disable auto notch filter |
+| `anf_level` | `0-100` | Set auto notch filter level |
+| `apf` | `0\|1` | Enable/disable auto peak filter |
+| `apf_level` | `0-100` | Set auto peak filter level |
+| `audio_level` | `0-100` | Set slice audio level |
+| `audio_mute` | `0\|1` | Mute/unmute slice audio |
+| `audio_pan` | `0-100` | Set audio pan position (50=center) |
+| `dax` | `channel` | Set DAX channel assignment |
+| `dfm_pre_de_emphasis` | `0\|1` | Set DFM pre/de-emphasis |
+| `digl_offset` | `Hz` | Set DIGL offset frequency |
+| `digu_offset` | `Hz` | Set DIGU offset frequency |
+| `diversity` | `0\|1` | Enable/disable diversity reception |
+| `fm_deviation` | `Hz` | Set FM deviation |
+| `fm_repeater_offset_freq` | `MHz` | Set FM repeater offset frequency |
+| `fm_tone_burst` | `0\|1` | Enable/disable FM 1750Hz tone burst |
+| `fm_tone_mode` | `off\|ctcss_tx` | Set FM tone mode |
+| `fm_tone_value` | `tone_freq` | Set FM tone value |
+| `loopa` | `0\|1` | Enable/disable loop A |
+| `loopb` | `0\|1` | Enable/disable loop B |
+| `mode` | `USB\|LSB\|CW\|AM\|FM\|DIGU\|DIGL\|SAM\|DSB` | Set slice demodulation mode |
+| `nb` | `0\|1` | Enable/disable noise blanker |
+| `nb_level` | `0-100` | Set noise blanker level |
+| `nr` | `0\|1` | Enable/disable noise reduction |
+| `nr_level` | `0-100` | Set noise reduction level |
+| `play` | `0\|1` | Control audio playback |
+| `record` | `0\|1` | Control audio recording |
+| `repeater_offset_dir` | `simplex\|up\|down` | Set repeater offset direction |
+| `rfgain` | `value` | Set slice RF gain (obsolete) |
+| `rit_freq` | `-99999 to 99999` | Set RIT frequency offset in Hz |
+| `rit_on` | `0\|1` | Enable/disable RIT |
+| `rtty_mark` | `Hz` | Set RTTY mark frequency |
+| `rtty_shift` | `Hz` | Set RTTY shift frequency |
+| `rxant` | `ANT1\|ANT2\|RXA\|RXB\|XVTR` | Set receive antenna |
+| `squelch` | `0\|1` | Enable/disable squelch |
+| `squelch_level` | `0-100` | Set squelch level |
+| `step` | `Hz` | Set tuning step size |
+| `step_list` | `step1,step2,step3,...` | Set tuning step list |
+| `tx` | `0\|1` | Set slice as transmit slice |
+| `tx_offset_freq` | `MHz` | Set transmit offset frequency |
+| `txant` | `ANT1\|ANT2\|XVTR` | Set transmit antenna |
+| `wnb` | `0\|1` | Enable/disable wideband noise blanker |
+| `wnb_level` | `0-100` | Set wideband noise blanker level |
+| `xit_freq` | `-99999 to 99999` | Set XIT frequency offset in Hz |
+| `xit_on` | `0\|1` | Enable/disable XIT |
+
+**Examples:**
+```
+C25|slice set 0 active=1
+C26|slice set 0 mode=USB
+C27|slice set 0 audio_level=75
+C28|slice set 0 agc_mode=fast
+C29|slice set 0 rxant=ANT1
+```
+
+## TUNE
+
+Tune a slice to a specific frequency.
+
+```
+C[D]<seq_number>|slice tune <slice_index> <freq> [autopan=<0|1>]
+```
+
+**Parameters:**
+- `<slice_index>` = slice number to tune
+- `<freq>` = frequency in MHz
+- `autopan` = optional parameter to control automatic panadapter panning
+
+**Example:**
+```
+C25|slice tune 0 14.230000 autopan=0
+```
+
+**Response:**
+```
+R25|0|14.230000|                                  (success - actual frequency set)
+R25|50000004||Invalid frequency                   (error - frequency out of range)
+```
+
+## UNLOCK
+
+Unlock a slice frequency to allow tuning changes.
+
+```
+C[D]<seq_number>|slice unlock <slice_index>
+```
+
+**Parameters:**
+- `<slice_index>` = slice number to unlock
+
+**Example:**
+```
+C26|slice unlock 0
+```

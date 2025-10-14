@@ -1,0 +1,226 @@
+# File and Stream Commands
+
+## File Commands
+
+File commands handle file operations including uploads, downloads, and filename management.
+
+### DOWNLOAD
+
+Download files from the radio.
+
+#### DATABASE PACKAGE
+
+Download database package.
+
+```
+C[D]<seq_number>|file download db_package
+```
+
+**Example:**
+```
+C130|file download db_package
+```
+
+**Response:**
+```
+R130|0||                                         (success - download started)
+R130|50000007||File not found                    (error - file doesn't exist)
+```
+
+#### UNITY TEST
+
+Download unity test data.
+
+```
+C[D]<seq_number>|file download unity_test
+```
+
+**Example:**
+```
+C131|file download unity_test
+```
+
+**Response:**
+```
+R131|0||                                         (success - download started)
+R131|50000007||File not found                    (error - file doesn't exist)
+```
+
+### FILENAME
+
+Set filename for file operations.
+
+```
+C[D]<seq_number>|file filename <filename>
+```
+
+**Parameters:**
+- `<filename>` = name of the file
+
+**Example:**
+```
+C132|file filename backup.db
+```
+
+**Response:**
+```
+R132|0||                                         (success - filename set)
+```
+
+### UPLOAD
+
+Upload files to the radio.
+
+#### GENERIC UPLOAD
+
+Upload a file with specified size and type.
+
+```
+C[D]<seq_number>|file upload <size> <type>
+```
+
+**Parameters:**
+- `<size>` = file size in bytes
+- `<type>` = file type designation
+
+**Example:**
+```
+C133|file upload 1024000 firmware
+```
+
+#### DATABASE IMPORT
+
+Upload database import file.
+
+```
+C[D]<seq_number>|file upload <length> db_import
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C134|file upload 2048000 db_import
+```
+
+#### DATABASE METADATA SUBSET
+
+Upload database metadata subset.
+
+```
+C[D]<seq_number>|file upload <length> db_meta_subset
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C135|file upload 512000 db_meta_subset
+```
+
+#### MEMORIES CSV FILE
+
+Upload memories CSV file.
+
+```
+C[D]<seq_number>|file upload <length> memories_csv_file
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C136|file upload 102400 memories_csv_file
+```
+
+#### NEW WAVEFORM
+
+Upload new waveform data.
+
+```
+C[D]<seq_number>|file upload <length> new_waveform
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C137|file upload 8192000 new_waveform
+```
+
+#### TURF DATA
+
+Upload TURF (Terrain) data.
+
+```
+C[D]<seq_number>|file upload <length> turf
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C138|file upload 4096000 turf
+```
+
+#### FIRMWARE UPDATE
+
+Upload firmware update file.
+
+```
+C[D]<seq_number>|file upload <length> update
+```
+
+**Parameters:**
+- `<length>` = file length in bytes
+
+**Example:**
+```
+C139|file upload 16777216 update
+```
+
+## Stream Commands
+
+Stream commands create and manage various audio and data streams.
+
+### CREATE
+
+Create different types of streams for audio and data transmission.
+
+```
+C[D]<seq_number>|stream create type=<stream_type> [additional_parameters]
+```
+
+**Available Stream Types:**
+
+| Stream Type | Additional Parameters | Description |
+|-------------|----------------------|-------------|
+| `dax_iq` | `daxiq_channel=<n>` | Create DAX IQ stream with specified channel |
+| `dax_mic` | None | Create DAX microphone stream |
+| `dax_rx` | `dax_channel=<n>` | Create DAX RX stream with specified channel |
+| `dax_tx` | None | Create DAX TX stream |
+| `remote_audio_rx` | `compression=<opus\|none>` (optional) | Create remote audio RX stream |
+| `remote_audio_tx` | None | Create remote audio TX stream |
+
+**Special Case:**
+```
+C[D]<seq_number>|stream create netcw
+```
+Create NetCW stream for network CW keying (different syntax).
+
+**Examples:**
+```
+C140|stream create type=dax_iq daxiq_channel=0
+C141|stream create type=dax_mic
+C142|stream create type=dax_rx dax_channel=1
+C143|stream create type=dax_tx
+C144|stream create type=remote_audio_rx compression=opus
+C145|stream create type=remote_audio_rx compression=none
+C146|stream create type=remote_audio_tx
+C147|stream create netcw
+```

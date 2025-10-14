@@ -1,0 +1,317 @@
+# CW and CWX Commands
+
+CW commands control Morse code keying and parameters. CWX commands manage CW text buffer operations and macros.
+
+## CW Commands
+
+### BREAK_IN
+
+Enable/disable CW break-in (QSK).
+
+```
+C[D]<seq_number>|cw break_in <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable break-in
+
+**Example:**
+```
+C50|cw break_in 1
+```
+
+**Response:**
+```
+R50|0||                                          (success - break-in enabled)
+```
+
+### BREAK_IN_DELAY
+
+Set CW break-in delay in milliseconds.
+
+```
+C[D]<seq_number>|cw break_in_delay <0-2000>
+```
+
+**Parameters:**
+- `<0-2000>` = delay in milliseconds
+
+**Example:**
+```
+C51|cw break_in_delay 100
+```
+
+**Response:**
+```
+R51|0||                                          (success - break-in delay set)
+```
+
+### CWL_ENABLED
+
+Enable/disable CWL (CW Learning).
+
+```
+C[D]<seq_number>|cw cwl_enabled <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable CWL
+
+**Example:**
+```
+C52|cw cwl_enabled 0
+```
+
+**Response:**
+```
+R52|0||                                          (success - CWL disabled)
+```
+
+### IAMBIC
+
+Enable/disable iambic keyer.
+
+```
+C[D]<seq_number>|cw iambic <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable iambic keyer
+
+**Example:**
+```
+C53|cw iambic 1
+```
+
+### KEY
+
+Control CW key state.
+
+```
+C[D]<seq_number>|cw key <0|1> time=<timestamp> index=<n> client_handle=<handle>
+```
+
+**Parameters:**
+- `<0|1>` = key up/down
+- `<timestamp>` = timing timestamp
+- `<n>` = key index
+- `<handle>` = client handle
+
+**Example:**
+```
+C54|cw key 1 time=1234567890 index=0 client_handle=0x12345678
+```
+
+### KEY IMMEDIATE
+
+Immediate CW key control.
+
+```
+C[D]<seq_number>|cw key immediate <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = key up/down immediately
+
+**Example:**
+```
+C55|cw key immediate 1
+```
+
+### MODE
+
+Set iambic keyer mode.
+
+```
+C[D]<seq_number>|cw mode <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = Iambic A (0) or Iambic B (1)
+
+**Example:**
+```
+C56|cw mode 1
+```
+
+### PITCH
+
+Set CW sidetone pitch.
+
+```
+C[D]<seq_number>|cw pitch <100-6000>
+```
+
+**Parameters:**
+- `<100-6000>` = pitch frequency in Hz
+
+**Example:**
+```
+C57|cw pitch 600
+```
+
+**Response:**
+```
+R57|0||                                          (success - CW pitch set)
+```
+
+### PTT
+
+Control CW PTT state.
+
+```
+C[D]<seq_number>|cw ptt <0|1> time=<timestamp> index=<n> client_handle=<handle>
+```
+
+**Parameters:**
+- `<0|1>` = PTT off/on
+- `<timestamp>` = timing timestamp
+- `<n>` = PTT index
+- `<handle>` = client handle
+
+**Example:**
+```
+C58|cw ptt 1 time=1234567890 index=0 client_handle=0x12345678
+```
+
+### SIDETONE
+
+Enable/disable CW sidetone.
+
+```
+C[D]<seq_number>|cw sidetone <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable sidetone
+
+**Example:**
+```
+C59|cw sidetone 1
+```
+
+### SWAP
+
+Swap paddle configuration (dit/dah).
+
+```
+C[D]<seq_number>|cw swap <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = normal/swapped paddle
+
+**Example:**
+```
+C60|cw swap 0
+```
+
+### SYNCCWX
+
+Synchronize CWX buffer.
+
+```
+C[D]<seq_number>|cw synccwx <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable CWX sync
+
+**Example:**
+```
+C61|cw synccwx 1
+```
+
+### WPM
+
+Set CW speed in words per minute.
+
+```
+C[D]<seq_number>|cw wpm <5-100>
+```
+
+**Parameters:**
+- `<5-100>` = speed in words per minute
+
+**Example:**
+```
+C62|cw wpm 20
+```
+
+**Response:**
+```
+R62|0||                                          (success - CW speed set)
+```
+
+## CWX Commands
+
+CWX commands manage the CW text buffer for automated CW transmission.
+
+### ERASE
+
+Erase characters from the CW buffer.
+
+```
+C[D]<seq_number>|cwx erase <num_chars> [<radio_index>]
+```
+
+**Parameters:**
+- `<num_chars>` = number of characters to erase
+- `<radio_index>` = optional radio index
+
+**Example:**
+```
+C70|cwx erase 5
+C71|cwx erase 3 1
+```
+
+### INSERT
+
+Insert text into the CW buffer at a specific position.
+
+```
+C[D]<seq_number>|cwx insert <radio_index> "<message>" <block>
+```
+
+**Parameters:**
+- `<radio_index>` = radio index
+- `<message>` = text message to insert
+- `<block>` = block number
+
+**Example:**
+```
+C72|cwx insert 1 "CQ CQ DE W1AW" 0
+```
+
+### MACRO SEND
+
+Send a stored CW macro by index.
+
+```
+C[D]<seq_number>|cwx macro send <index>
+```
+
+**Parameters:**
+- `<index>` = macro number to send
+
+**Example:**
+```
+C73|cwx macro send 1
+```
+
+### SEND
+
+Send CW text message.
+
+```
+C[D]<seq_number>|cwx send "<message>" <block>
+```
+
+**Parameters:**
+- `<message>` = text message to send
+- `<block>` = block number
+
+**Example:**
+```
+C74|cwx send "73 DE W1AW" 0
+```
