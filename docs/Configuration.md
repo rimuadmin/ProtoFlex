@@ -6,7 +6,12 @@
 
 [![SmartSDR Connected](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_8x16.png)
 
-
+>
+> ℹ️ Change the attribute 'version' if you need to connect from a different version of SmartSDR.
+> 
+```JSON
+"version": "4.0.1.39161"
+```
 
 ## Default JSON file
 ```JSON
