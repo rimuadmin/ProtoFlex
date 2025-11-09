@@ -107,7 +107,7 @@ R13|0||                                          (success - radio name set)
 
 ### RADIO OSCILLATOR
 
-Set oscillator type.
+Set 10 MHz reference oscillator type (FLEX-6400, FLEX-6400M, FLEX-6600, FLEX-6600M models).
 
 ```
 C[D]<seq_number>|radio oscillator <oscillator_type>
@@ -115,10 +115,16 @@ C[D]<seq_number>|radio oscillator <oscillator_type>
 
 **Parameters:**
 - `<oscillator_type>` = oscillator configuration
+  - `Auto` = Automatic oscillator selection (default)
+  - `External` = External reference oscillator
+  - `GPSDO` = GPS Disciplined Oscillator
+  - `TCXO` = Temperature Compensated Crystal Oscillator
 
-**Example:**
+**Examples:**
 ```
 C14|radio oscillator TCXO
+C15|radio oscillator GPSDO
+C16|radio oscillator Auto
 ```
 
 **Response:**
@@ -172,15 +178,21 @@ C[D]<seq_number>|radio screensaver <mode>
 
 **Parameters:**
 - `<mode>` = screensaver mode setting
+  - `none` = No screensaver
+  - `model` = Display radio model
+  - `name` = Display radio name (default)
+  - `callsign` = Display callsign
 
-**Example:**
+**Examples:**
 ```
-C17|radio screensaver off
+C17|radio screensaver none
+C18|radio screensaver callsign
+C19|radio screensaver model
 ```
 
 **Response:**
 ```
-R17|0||                                          (success - screensaver disabled)
+R17|0||                                          (success - screensaver set)
 ```
 
 ### RADIO SET
@@ -199,6 +211,7 @@ C[D]<seq_number>|radio set <parameter>=<value>
 | `cal_freq` | `MHz` | Set calibration frequency |
 | `enforce_private_ip_connections` | `0\|1` | Enforce private IP connections only |
 | `freq_error_ppb` | `ppb` | Set frequency error correction in parts per billion |
+| `full_duplex_enabled` | `0\|1` | Enable/disable full duplex mode |
 | `low_latency_digital_modes` | `0\|1` | Enable low latency digital modes |
 | `mf_enable` | `0\|1` | Enable MultiFlex operation |
 | `mute_local_audio_when_remote` | `0\|1` | Mute local audio when remote client connected |
