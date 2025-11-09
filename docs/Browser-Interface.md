@@ -20,7 +20,7 @@ This page shows panadapters. Note that when a panadapter is closed, the inUse va
 [![ProtoFlex Waterfalls Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_waterfalls.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_waterfalls.png)
 
 # Meters Page
-This page shows the meters that ProtoFlex creates. The values for meters can be changed, but more work need to be done here to make it useful for testing meter values.
+This page shows the meters that ProtoFlex creates. The values for meters can be changed, but more work needs to be done here to make it useful for testing meter values.
 
 [![ProtoFlex Meters Page](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_meters.png)](https://raw.githubusercontent.com/rimuadmin/ProtoFlex/main/images/protoflex_meters.png)
 

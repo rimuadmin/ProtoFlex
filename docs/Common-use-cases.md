@@ -10,7 +10,7 @@ If you need to test how your client handles multiple FlexRadios on the same subn
 If your application monitors meter data — such as temperature, voltage, or fan levels — ProtoFlex lets you simulate dynamic changes in real time. Use the built-in Web UI to adjust meter values and verify that your client responds appropriately, such as triggering alerts for overheating or low voltage conditions.
 
 ## 4. Log Client Commands for Bug Reports
-If suspect a bug in FlexRadio's firmware or API behavior, use ProtoFlex to log every command sent by your custom hardware. These logs can then be replayed or tested using simple clients like PuTTY, helping you isolate issues and generate reproducible bug reports.
+If you suspect a bug in FlexRadio's firmware or API behavior, use ProtoFlex to log every command sent by your custom hardware. These logs can then be replayed or tested using simple clients like PuTTY, helping you isolate issues and generate reproducible bug reports.
 
 ## 5. Try out SmartSDR before Buying a FlexRadio
 If you're considering purchasing a FlexRadio but want to explore SmartSDR first, ProtoFlex offers a low-risk way to evaluate the software. By launching a ProtoFlex instance on your local network, SmartSDR will detect it just like a real FlexRadio. You can connect and interact with the interface—giving you a hands-on feel for the operation of the radio.
