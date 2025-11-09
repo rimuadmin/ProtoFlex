@@ -1,6 +1,6 @@
 {
-  "max_slices": 2,
-  "max_panadapters": 2,
+  "max_slices": 4,
+  "max_panadapters": 4,
   "lineout_gain": 100,
   "lineout_mute": 0,
   "headphone_gain": 100,
@@ -29,7 +29,7 @@
   "api_version": "V1.4.0.0",
   "model": "FLEX-6400",
   "serial": "0111-2222-3333-4444",
-  "version": "3.10.15.38923",
+  "version": "4.0.1.39161",
   "radio_license_id": "00-01-02-03-04-05",
   "requires_additional_license": 0,
   "licensed_clients": 2, 
