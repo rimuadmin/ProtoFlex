@@ -74,6 +74,28 @@ C23|slice lock 0
 R23|0||                                          (success - slice locked)
 ```
 
+### SLICE M
+
+Create a slice at a specific frequency on a panadapter.
+
+```
+C[D]<seq_number>|slice m <frequency> pan=<stream_id>
+```
+
+**Parameters:**
+- `<frequency>` = frequency in MHz
+- `<stream_id>` = panadapter stream ID
+
+**Example:**
+```
+C23a|slice m 14.230 pan=0x40000000
+```
+
+**Response:**
+```
+R23a|0|2|                                        (success - slice index 2)
+```
+
 ### SLICE REMOVE
 
 Remove a slice receiver.
@@ -114,6 +136,7 @@ C[D]<seq_number>|slice set <slice_index> <parameter>=<value>
 | `agc_threshold` | `0-100` | Set AGC threshold |
 | `anf` | `0\|1` | Enable/disable auto notch filter |
 | `anf_level` | `0-100` | Set auto notch filter level |
+| `anft` | `0\|1` | Enable/disable ANFT |
 | `apf` | `0\|1` | Enable/disable auto peak filter |
 | `apf_level` | `0-100` | Set auto peak filter level |
 | `audio_level` | `0-100` | Set slice audio level |
@@ -129,6 +152,10 @@ C[D]<seq_number>|slice set <slice_index> <parameter>=<value>
 | `fm_tone_burst` | `0\|1` | Enable/disable FM 1750Hz tone burst |
 | `fm_tone_mode` | `off\|ctcss_tx` | Set FM tone mode |
 | `fm_tone_value` | `tone_freq` | Set FM tone value |
+| `lms_anf` | `0\|1` | Enable/disable LMS Auto Notch Filter |
+| `lms_anf_level` | `0-100` | Set LMS ANF level |
+| `lms_nr` | `0\|1` | Enable/disable LMS Noise Reduction |
+| `lms_nr_level` | `0-100` | Set LMS NR level |
 | `loopa` | `0\|1` | Enable/disable loop A |
 | `loopb` | `0\|1` | Enable/disable loop B |
 | `mode` | `USB\|LSB\|CW\|AM\|FM\|DIGU\|DIGL\|SAM\|DSB` | Set slice demodulation mode |
@@ -136,15 +163,20 @@ C[D]<seq_number>|slice set <slice_index> <parameter>=<value>
 | `nb_level` | `0-100` | Set noise blanker level |
 | `nr` | `0\|1` | Enable/disable noise reduction |
 | `nr_level` | `0-100` | Set noise reduction level |
+| `nrf` | `0\|1` | Enable/disable NRF |
+| `nrf_level` | `0-100` | Set NRF level |
 | `play` | `0\|1` | Control audio playback |
 | `record` | `0\|1` | Control audio recording |
 | `repeater_offset_dir` | `simplex\|up\|down` | Set repeater offset direction |
 | `rfgain` | `value` | Set slice RF gain (obsolete) |
 | `rit_freq` | `-99999 to 99999` | Set RIT frequency offset in Hz |
 | `rit_on` | `0\|1` | Enable/disable RIT |
+| `rnnoise` | `0\|1` | Enable/disable RNNoise |
 | `rtty_mark` | `Hz` | Set RTTY mark frequency |
 | `rtty_shift` | `Hz` | Set RTTY shift frequency |
 | `rxant` | `ANT1\|ANT2\|RXA\|RXB\|XVTR` | Set receive antenna |
+| `speex_nr` | `0\|1` | Enable/disable Speex Noise Reduction |
+| `speex_nr_level` | `0-100` | Set Speex NR level |
 | `squelch` | `0\|1` | Enable/disable squelch |
 | `squelch_level` | `0-100` | Set squelch level |
 | `step` | `Hz` | Set tuning step size |
@@ -177,7 +209,7 @@ C[D]<seq_number>|slice tune <slice_index> <freq> [autopan=<0|1>]
 **Parameters:**
 - `<slice_index>` = slice number to tune
 - `<freq>` = frequency in MHz
-- `autopan` = optional parameter to control automatic panadapter panning
+- `autopan` = optional parameter to control automatic panadapter panning (default=0)
 
 **Example:**
 ```
@@ -189,6 +221,53 @@ C25|slice tune 0 14.230000 autopan=0
 R25|0|14.230000|                                  (success - actual frequency set)
 R25|50000004||Invalid frequency                   (error - frequency out of range)
 ```
+
+### SLICE AUTO_TUNE
+
+Automatically tune a slice.
+
+```
+C[D]<seq_number>|slice auto_tune <slice_index> [int=<0|1>]
+```
+
+**Parameters:**
+- `<slice_index>` = slice number to auto-tune
+- `int` = optional intermittent flag (0=continuous, 1=intermittent)
+
+**Example:**
+```
+C25a|slice auto_tune 0 int=0
+```
+
+**Response:**
+```
+R25a|0||                                          (success - auto-tune started)
+```
+
+### SLICE WAVEFORM_CMD
+
+Send a waveform command to a slice.
+
+```
+C[D]<seq_number>|slice waveform_cmd <slice_index> <command>
+```
+
+**Parameters:**
+- `<slice_index>` = slice number
+- `<command>` = waveform command to send
+
+**Example:**
+```
+C25b|slice waveform_cmd 0 <command_here>
+```
+
+**Response:**
+```
+R25b|0||                                          (success - command sent)
+```
+
+> [!NOTE]
+> More information needed on valid waveform commands.
 
 ### SLICE UNLOCK
 
