@@ -3,6 +3,11 @@
 
 File commands handle file operations including uploads, downloads, and filename management.
 
+## Command Index
+- [FILE DOWNLOAD](#file-download)
+- [FILE FILENAME](#file-filename)
+- [FILE UPLOAD](#file-upload)
+
 #### FILE DOWNLOAD
 
 Download database package, or unity test data from the radio.

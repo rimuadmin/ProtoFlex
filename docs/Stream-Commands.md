@@ -3,6 +3,11 @@
 
 Stream commands create and manage various audio and data streams.
 
+## Command Index
+- [STREAM CREATE](#create)
+- [STREAM SET](#stream-set)
+- [STREAM REMOVE](#stream-remove)
+
 ### CREATE
 
 Create different types of streams for audio and data transmission.

@@ -9,6 +9,21 @@ CW commands control Morse code keying and parameters.
 - Extended iambic modes (2=Strict, 3=Bug) exist but are not exposed in standard properties
 - Auto-peaking filter (APF) commands are CW-related but documented under Equalizer commands
 
+## Command Index
+- [CW BREAK_IN](#cw-break_in)
+- [CW BREAK_IN_DELAY](#cw-break_in_delay)
+- [CW CWL_ENABLED](#cw-cwl_enabled)
+- [CW IAMBIC](#cw-iambic)
+- [CW KEY](#cw-key)
+- [CW KEY IMMEDIATE](#cw-key-immediate)
+- [CW MODE](#cw-mode)
+- [CW PITCH](#cw-pitch)
+- [CW PTT](#cw-ptt)
+- [CW SIDETONE](#cw-sidetone)
+- [CW SWAP](#cw-swap)
+- [CW SYNCCWX](#cw-synccwx)
+- [CW WPM](#cw-wpm)
+
 ### CW BREAK_IN
 
 Enable/disable CW break-in (QSK).
