@@ -27,6 +27,13 @@ R130|0||                                         (success - download started)
 R130|50000007||File not found                    (error - file doesn't exist)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 #### FILE FILENAME
 
 Set filename for file operations.
@@ -68,6 +75,14 @@ C[D]<seq_number>|file upload <size> <type>
 ```
 C133|file upload 1024000 firmware
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000081 | Invalid Waveform |
+| 5000002C | Incorrect number of parameters |
 
 ##### DB_IMPORT
 

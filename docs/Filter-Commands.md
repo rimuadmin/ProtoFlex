@@ -21,3 +21,11 @@ C[D]<seq_number>|filt <slice_index> <low> <high>
 ```
 C170|filt 0 100 3000
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000000D | Incorrect slice receiver |
+| 5000002C | Incorrect number of parameters |

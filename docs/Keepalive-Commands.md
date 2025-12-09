@@ -16,3 +16,11 @@ C[D]<seq_number>|keepalive enable
 ```
 C200|keepalive enable
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000013 | Bad Command |
+| 5000002C | Incorrect number of parameters |

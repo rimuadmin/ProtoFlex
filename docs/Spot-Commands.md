@@ -35,6 +35,13 @@ C340|spot add callsign=W1AW rx_freq=14.230 mode=CW color=red
 R340|0|spot_id=12345|                           (success - returns spot ID)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK spot created |
+| 5000002C | Incorrect number of parameters |
+
 ## SPOT CLEAR
 
 Clear all spots from the display.
@@ -88,6 +95,14 @@ R343|0||                                         (success - callsign updated)
 R344|0||                                         (success - mode updated)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | spot set successful |
+| 5000002C | Incorrect number of parameters |
+| 500000BC | Invalid spot index |
+
 **Notes:**
 - Spot IDs are assigned by the radio when the spot is created
 - Callsign spaces are automatically converted to `\u007f` internally
@@ -118,3 +133,11 @@ C347|spot remove 12345
 R347|0||                                         (success - spot removed)
 R347|50000015||Spot not found                    (error - invalid spot ID)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | Successfully removed spot |
+| 500000BC | Invalid spot index |
+| 5000002C | Incorrect number of parameters |

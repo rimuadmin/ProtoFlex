@@ -54,6 +54,14 @@ C160|eq rxsc mode=1
 R160|0||                                         (success - RX EQ enabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 #### FREQUENCY BANDS
 
 Set individual frequency band levels for RX equalizer.
@@ -88,6 +96,14 @@ C165|eq rxsc 8000Hz=0
 ```
 R161|0||                                         (success - level set)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 #### INFO
 
@@ -127,6 +143,14 @@ C170|eq txsc mode=1
 R170|0||                                         (success - TX EQ enabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 #### FREQUENCY BANDS
 
 Set individual frequency band levels for TX equalizer.
@@ -161,6 +185,14 @@ C175|eq txsc 8000Hz=0
 ```
 R171|0||                                         (success - level set)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 #### INFO
 

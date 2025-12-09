@@ -22,3 +22,9 @@ C150|ant list
 ```
 R150|0|ANT1 ANT2 RX_A RX_B XVTR|               (success - returns antenna list)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | List of antennas separated by commas |

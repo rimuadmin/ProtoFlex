@@ -21,3 +21,13 @@ C230|meter list
 ```
 R230|0|1.src=COD~ANT#1.unit=SWR.low=1.0.hi=10.0 2.src=COD~ANT#1.unit=FORW.low=0.0.hi=100.0|  (success - returns meter list)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+| 500000A5 | Invalid meter type |
+| 500000A6 | Invalid Units |

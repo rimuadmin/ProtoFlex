@@ -21,6 +21,14 @@ C[D]<seq_number>|sub <category> all
 C250|sub slice all
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK subscription registered |
+| 5000002C | Incorrect number of parameters |
+| 500000A3 | Invalid subscription object name |
+
 ### UNSUB
 
 Unsubscribe from status updates.

@@ -31,6 +31,14 @@ R400|0||                                         (success - amplifier set to ope
 R400|50000015||Amplifier not found               (error - invalid handle)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 500000A7 | Invalid amplifier - could not find by handle |
+
 ## Notes
 
 - Amplifiers are identified by unique handles assigned by the radio

@@ -46,3 +46,10 @@ C241|ping
 ```
 R241|0|pong|                                    (success - simple pong response)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |

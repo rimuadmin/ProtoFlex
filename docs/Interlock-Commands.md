@@ -38,3 +38,11 @@ C191|interlock acc_tx_enabled=1
 C192|interlock tx_delay=50
 C193|interlock timeout=5000
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK timeout value changed |
+| 50000016 | Malformed command |
+| 5000002C | Incorrect number of parameters |

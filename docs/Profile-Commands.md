@@ -95,6 +95,14 @@ C[D]<seq_number>|profile global save "<name>"
 C323|profile global save "DX Configuration"
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 #### DELETE
 
 Delete a global profile.
@@ -111,6 +119,14 @@ C[D]<seq_number>|profile global delete "<name>"
 C324|profile global delete "Old Configuration"
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 #### LOAD
 
 Load a global profile.
@@ -126,6 +142,14 @@ C[D]<seq_number>|profile global load "<name>"
 ```
 C325|profile global load "DX Configuration"
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 #### INFO
 
@@ -165,6 +189,14 @@ C[D]<seq_number>|profile mic save "<name>"
 ```
 C327|profile mic save "Contest Mic"
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 **Note:** When auto-save is enabled (`profile autosave on`), profile changes are saved automatically. This command will return an error indicating it is no longer supported.
 
@@ -216,6 +248,14 @@ C[D]<seq_number>|profile mic delete "<name>"
 C330|profile mic delete "Old Mic Setup"
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 #### LOAD
 
 Load a microphone profile.
@@ -231,6 +271,14 @@ C[D]<seq_number>|profile mic load "<name>"
 ```
 C331|profile mic load "Contest Mic"
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 ### TRANSMIT
 
@@ -254,6 +302,14 @@ C[D]<seq_number>|profile transmit save "<name>"
 ```
 C332|profile transmit save "High Power"
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 **Note:** When auto-save is enabled (`profile autosave on`), profile changes are saved automatically. This command will return an error indicating it is no longer supported.
 
@@ -304,6 +360,14 @@ C[D]<seq_number>|profile transmit delete "<name>"
 ```
 C335|profile transmit delete "Old Setup"
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
 
 ### TX
 

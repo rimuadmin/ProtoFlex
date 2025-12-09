@@ -45,6 +45,13 @@ C50|cw break_in 1
 R50|0||                                          (success - break-in enabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW BREAK_IN_DELAY
 
 Set CW break-in delay in milliseconds.
@@ -65,6 +72,13 @@ C51|cw break_in_delay 100
 ```
 R51|0||                                          (success - break-in delay set)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### CW CWL_ENABLED
 
@@ -87,6 +101,13 @@ C52|cw cwl_enabled 0
 R52|0||                                          (success - CWL disabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW IAMBIC
 
 Enable/disable iambic keyer.
@@ -102,6 +123,13 @@ C[D]<seq_number>|cw iambic <0|1>
 ```
 C53|cw iambic 1
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### CW KEY
 
@@ -154,6 +182,13 @@ C[D]<seq_number>|cw mode <0|1>
 C56|cw mode 1
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW PITCH
 
 Set CW sidetone pitch.
@@ -175,6 +210,13 @@ C57|cw pitch 600
 R57|0||                                          (success - CW pitch set)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW PTT
 
 Control CW PTT state.
@@ -194,6 +236,13 @@ C[D]<seq_number>|cw ptt <0|1> time=<timestamp> index=<n> client_handle=<handle>
 C58|cw ptt 1 time=1234567890 index=0 client_handle=0x12345678
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW SIDETONE
 
 Enable/disable CW sidetone.
@@ -210,6 +259,13 @@ C[D]<seq_number>|cw sidetone <0|1>
 C59|cw sidetone 1
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### CW SWAP
 
 Swap paddle configuration (dit/dah).
@@ -225,6 +281,13 @@ C[D]<seq_number>|cw swap <0|1>
 ```
 C60|cw swap 0
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### CW SYNCCWX
 
@@ -262,3 +325,10 @@ C62|cw wpm 20
 ```
 R62|0||                                          (success - CW speed set)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |

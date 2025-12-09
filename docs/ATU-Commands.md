@@ -29,6 +29,12 @@ C151|atu bypass
 R151|0||                                         (success - ATU bypassed)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | ATU now in bypass mode |
+
 ### ATU CLEAR
 
 Clear ATU memories.
@@ -80,6 +86,13 @@ C154|atu start
 ```
 R154|0||                                         (success - tuning started)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | ATU starting tune cycle |
+| 50000016 | Malformed Command |
 
 ---
 

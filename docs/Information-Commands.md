@@ -23,6 +23,12 @@ C180|info
 R180|0|model=FLEX-6700 version=3.4.15 serial=1234-5678-9012-3456|  (success - returns radio info)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | List of radio specific parameters |
+
 ### VERSION
 
 Get radio version information.

@@ -32,6 +32,15 @@ S<message>|tnf <id> freq=14.230000 depth=1 width=0.000100 permanent=0
 
 **Note:** The radio assigns a TNF ID when created, which is returned in the status message.
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+| 50000033 | Parameter out of Range |
+
 ### TNF SET
 
 Set TNF parameters.
@@ -71,6 +80,15 @@ R264|0||                                         (success - permanent flag set)
 - Width is specified in MHz: 0.000005 MHz = 5 Hz, 0.006000 MHz = 6000 Hz
 - Permanent TNFs persist across frequency changes
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+| 50000033 | Parameter out of Range |
+
 ### TNF REMOVE
 
 Remove a Tracking Notch Filter.
@@ -92,3 +110,10 @@ C265|tnf remove 1
 R265|0||                                         (success - TNF removed)
 S<message>|tnf 1 removed
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |

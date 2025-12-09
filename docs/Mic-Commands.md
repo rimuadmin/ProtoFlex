@@ -31,6 +31,13 @@ C300|mic acc 0
 R300|0||                                         (success - ACC disabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MIC BIAS
 
 Enable/disable microphone bias voltage.
@@ -51,6 +58,13 @@ C301|mic bias 1
 ```
 R301|0||                                         (success - mic bias enabled)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### MIC BOOST
 
@@ -73,6 +87,13 @@ C302|mic boost 0
 R302|0||                                         (success - mic boost disabled)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MIC INPUT
 
 Set microphone input source.
@@ -88,6 +109,14 @@ C[D]<seq_number>|mic input <input_name>
 ```
 C303|mic input MIC
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000004B | Incorrect mic type |
+| 5000002C | Incorrect number of parameters |
 
 ### MIC LIST
 

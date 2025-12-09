@@ -26,6 +26,13 @@ C[D]<seq_number>|mixer front_speaker mute <0|1>
 C310|mixer front_speaker mute 0
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MIXER HEADPHONE GAIN
 
 Set headphone gain level.
@@ -41,6 +48,13 @@ C[D]<seq_number>|mixer headphone gain <0-100>
 ```
 C311|mixer headphone gain 75
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### MIXER HEADPHONE MUTE
 
@@ -58,6 +72,13 @@ C[D]<seq_number>|mixer headphone mute <0|1>
 C312|mixer headphone mute 0
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MIXER LINEOUT GAIN
 
 Set line output gain level.
@@ -74,6 +95,13 @@ C[D]<seq_number>|mixer lineout gain <0-100>
 C313|mixer lineout gain 50
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MIXER LINEOUT MUTE
 
 Mute/unmute line output.
@@ -89,3 +117,10 @@ C[D]<seq_number>|mixer lineout mute <0|1>
 ```
 C314|mixer lineout mute 0
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |

@@ -48,6 +48,13 @@ C221|memory apply 5
 R221|0||                                         (success - memory applied)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+
 ### MEMORY REMOVE
 
 Remove a memory channel.
@@ -68,6 +75,13 @@ C222|memory remove 5
 ```
 R222|0||                                         (success - memory removed)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 ### MEMORY SET
 
@@ -120,6 +134,14 @@ C233|memory set 5 tone_value=127.3
 ```
 R223|0||                                         (success - parameter set)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+| 50000033 | Parameter out of Range |
 
 **Notes:**
 - Text fields (owner, group, name) have spaces automatically converted to `\u007f` character

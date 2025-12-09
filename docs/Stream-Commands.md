@@ -52,6 +52,16 @@ R141|0|0x50000002|                               (success - stream ID returned)
 R142|50000010||Maximum streams reached           (error - too many streams)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000025 | Client Stream ID not found |
+| 5000002C | Incorrect number of parameters |
+| 50000059 | Invalid Stream ID |
+| 50000064 | No IP or PORT |
+
 **Notes:**
 - Stream IDs are assigned by the radio in hexadecimal format (e.g., 0x40000001)
 - Each stream type has a maximum number that can be created simultaneously
@@ -83,6 +93,14 @@ R148|0||                                         (success - rate set)
 R149|0||                                         (success - rate set)
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000016 | Malformed Command |
+| 5000002C | Incorrect number of parameters |
+
 **Notes:**
 - Most stream parameters are set during creation
 - DAX IQ sample rate is the primary configurable parameter after creation
@@ -109,6 +127,15 @@ C14b|stream remove 0x50000002
 R14a|0||                                         (success - stream removed)
 R14b|50000015||Stream not found                  (error - invalid stream ID)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 50000025 | Client Stream ID not found |
+| 5000002C | Incorrect number of parameters |
+| 50000059 | Invalid Stream ID |
 
 **Status Messages:**
 When a stream is removed, the radio also sends a status message:

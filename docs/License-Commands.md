@@ -17,3 +17,10 @@ C[D]<seq_number>|license refresh
 ```
 C210|license refresh
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |

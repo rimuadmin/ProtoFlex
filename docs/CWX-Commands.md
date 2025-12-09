@@ -32,6 +32,14 @@ C70|cwx erase 5
 C71|cwx erase 3 1
 ```
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+| 10000003 | Nothing to erase |
+
 ### CWX INSERT
 
 Insert text into the CW buffer at a specific position.
@@ -86,6 +94,14 @@ C74|cwx send "73 DE W1AW" 0
 **Notes:**
 - Spaces in the message are automatically converted to `\u007f` internally
 
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+| 31000004 | Nothing to send |
+
 ### CWX CLEAR
 
 Clear the CWX buffer.
@@ -103,6 +119,14 @@ C75|cwx clear
 ```
 R75|0||                                          (success - buffer cleared)
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
+| 500000C2 | Transmit not allowed due to other client transmitting |
 
 ### CWX MACRO SAVE
 
@@ -147,6 +171,13 @@ C[D]<seq_number>|cwx delay <0-2000>
 ```
 C78|cwx delay 750
 ```
+
+**Response Codes:**
+
+| Hex Code | Meaning |
+|----------|----------|
+| 00000000 | OK |
+| 5000002C | Incorrect number of parameters |
 
 **Response:**
 ```
