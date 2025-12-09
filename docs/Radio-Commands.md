@@ -84,6 +84,31 @@ Uninstall GPS module.
 C[D]<seq_number>|radio gps uninstall
 ```
 
+### LED_DISPLAY SET
+
+Set LED display brightness for radios with Overlord PA (e.g., FLEX-6700).
+
+```
+C[D]<seq_number>|led_display set bright=<0-100>
+```
+
+**Parameters:**
+- `bright` = LED display brightness level (0-100)
+
+**Example:**
+```
+C12|led_display set bright=50
+```
+
+**Response:**
+```
+R12|0||                                          (success - LED brightness set)
+```
+
+**Notes:**
+- This command is only available on radio models with Overlord PA
+- For basic display backlight, use `radio backlight` instead
+
 ### RADIO NAME
 
 Set radio name.
@@ -207,16 +232,23 @@ C[D]<seq_number>|radio set <parameter>=<value>
 
 | Parameter | Value Range | Description |
 |-----------|-------------|-------------|
+| `band_persistence_enabled` | `0\|1` | Enable/disable band persistence |
 | `binaural_rx` | `0\|1` | Enable/disable binaural RX |
 | `cal_freq` | `MHz` | Set calibration frequency |
 | `enforce_private_ip_connections` | `0\|1` | Enforce private IP connections only |
 | `freq_error_ppb` | `ppb` | Set frequency error correction in parts per billion |
+| `front_speaker_mute` | `0\|1` | Mute front speaker |
 | `full_duplex_enabled` | `0\|1` | Enable/disable full duplex mode |
+| `headphone_gain` | `0-100` | Set headphone gain level |
+| `headphone_mute` | `0\|1` | Mute headphone output |
+| `lineout_gain` | `0-100` | Set line output gain level |
+| `lineout_mute` | `0\|1` | Mute line output |
 | `low_latency_digital_modes` | `0\|1` | Enable low latency digital modes |
 | `mf_enable` | `0\|1` | Enable MultiFlex operation |
 | `mute_local_audio_when_remote` | `0\|1` | Mute local audio when remote client connected |
 | `remote_on_enabled` | `0\|1` | Enable remote power-on capability |
 | `rtty_mark_default` | `Hz` | Set default RTTY mark frequency |
+| `snap_tune_enabled` | `0\|1` | Enable/disable snap tune |
 | `tnf_enabled` | `0\|1` | Enable/disable Tracking Notch Filter |
 
 **Examples:**
@@ -224,6 +256,10 @@ C[D]<seq_number>|radio set <parameter>=<value>
 C20|radio set binaural_rx=1
 C21|radio set cal_freq=10.000000
 C22|radio set mf_enable=1
+C23|radio set band_persistence_enabled=1
+C24|radio set snap_tune_enabled=1
+C25|radio set headphone_gain=50
+C26|radio set lineout_mute=0
 ```
 
 ### RADIO STATIC_NET_PARAMS

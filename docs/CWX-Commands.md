@@ -71,3 +71,115 @@ C[D]<seq_number>|cwx send "<message>" <block>
 ```
 C74|cwx send "73 DE W1AW" 0
 ```
+
+**Notes:**
+- Spaces in the message are automatically converted to `\u007f` internally
+
+### CWX CLEAR
+
+Clear the CWX buffer.
+
+```
+C[D]<seq_number>|cwx clear
+```
+
+**Example:**
+```
+C75|cwx clear
+```
+
+**Response:**
+```
+R75|0||                                          (success - buffer cleared)
+```
+
+### CWX MACRO SAVE
+
+Save a CWX macro to a specific index.
+
+```
+C[D]<seq_number>|cwx macro save <index> "<message>"
+```
+
+**Parameters:**
+- `<index>` = macro index (1-12)
+- `<message>` = text message to save
+
+**Example:**
+```
+C76|cwx macro save 1 "CQ CQ CQ DE W1AW W1AW K"
+C77|cwx macro save 2 "TU 73 DE W1AW"
+```
+
+**Response:**
+```
+R76|0||                                          (success - macro saved)
+R77|0||                                          (success - macro saved)
+```
+
+**Notes:**
+- Macro index range is 1-12
+- Macros are stored in radio memory
+
+### CWX DELAY
+
+Set CWX break-in delay.
+
+```
+C[D]<seq_number>|cwx delay <0-2000>
+```
+
+**Parameters:**
+- `<0-2000>` = delay in milliseconds
+
+**Example:**
+```
+C78|cwx delay 750
+```
+
+**Response:**
+```
+R78|0||                                          (success - delay set)
+```
+
+### CWX WPM
+
+Set CWX speed in words per minute.
+
+```
+C[D]<seq_number>|cwx wpm <5-100>
+```
+
+**Parameters:**
+- `<5-100>` = speed in WPM
+
+**Example:**
+```
+C79|cwx wpm 25
+```
+
+**Response:**
+```
+R79|0||                                          (success - speed set)
+```
+
+### CWX QSK_ENABLED
+
+Enable or disable QSK (full break-in) for CWX.
+
+```
+C[D]<seq_number>|cwx qsk_enabled <0|1>
+```
+
+**Parameters:**
+- `<0|1>` = disable/enable QSK
+
+**Example:**
+```
+C7a|cwx qsk_enabled 1
+```
+
+**Response:**
+```
+R7a|0||                                          (success - QSK enabled)
+```

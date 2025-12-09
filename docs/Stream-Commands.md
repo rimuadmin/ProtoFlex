@@ -39,3 +39,79 @@ C145|stream create type=remote_audio_rx compression=none
 C146|stream create type=remote_audio_tx
 C147|stream create netcw
 ```
+
+**Responses:**
+```
+R140|0|0x40000001|                               (success - stream ID returned)
+R141|0|0x50000002|                               (success - stream ID returned)
+R142|50000010||Maximum streams reached           (error - too many streams)
+```
+
+**Notes:**
+- Stream IDs are assigned by the radio in hexadecimal format (e.g., 0x40000001)
+- Each stream type has a maximum number that can be created simultaneously
+- NetCW stream uses different syntax (not "type=netcw")
+
+### STREAM SET
+
+Configure stream parameters.
+
+```
+C[D]<seq_number>|stream set 0x<stream_id> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Stream Type | Value Range | Description |
+|-----------|-------------|-------------|-------------|
+| `daxiq_rate` | dax_iq | sample_rate | Set DAX IQ sample rate |
+
+**Examples:**
+```
+C148|stream set 0x40000001 daxiq_rate=24000
+C149|stream set 0x40000001 daxiq_rate=48000
+```
+
+**Responses:**
+```
+R148|0||                                         (success - rate set)
+R149|0||                                         (success - rate set)
+```
+
+**Notes:**
+- Most stream parameters are set during creation
+- DAX IQ sample rate is the primary configurable parameter after creation
+
+### STREAM REMOVE
+
+Remove/close a stream.
+
+```
+C[D]<seq_number>|stream remove 0x<stream_id>
+```
+
+**Parameters:**
+- `<stream_id>` = stream ID in hexadecimal format
+
+**Examples:**
+```
+C14a|stream remove 0x40000001
+C14b|stream remove 0x50000002
+```
+
+**Responses:**
+```
+R14a|0||                                         (success - stream removed)
+R14b|50000015||Stream not found                  (error - invalid stream ID)
+```
+
+**Status Messages:**
+When a stream is removed, the radio also sends a status message:
+```
+S<message>|stream 0x40000001 removed
+```
+
+**Notes:**
+- All stream types use the same remove command
+- The stream type is NOT included in the removal status message
+- Clients should track stream IDs and types internally

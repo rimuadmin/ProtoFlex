@@ -129,6 +129,9 @@ Manage microphone profiles.
 
 #### SAVE
 
+> [!WARNING]
+> **OBSOLETE** - This command is deprecated. Profiles are now saved automatically when changes are made. Use `profile mic create` to create a new microphone profile instead.
+
 Save a microphone profile.
 
 ```
@@ -142,6 +145,8 @@ C[D]<seq_number>|profile mic save "<name>"
 ```
 C327|profile mic save "Contest Mic"
 ```
+
+**Note:** When auto-save is enabled (`profile autosave on`), profile changes are saved automatically. This command will return an error indicating it is no longer supported.
 
 #### CREATE
 
@@ -213,6 +218,9 @@ Manage transmit profiles.
 
 #### SAVE
 
+> [!WARNING]
+> **OBSOLETE** - This command is deprecated. Profiles are now saved automatically when changes are made. Use `profile transmit create` to create a new transmit profile instead.
+
 Save a transmit profile.
 
 ```
@@ -226,6 +234,8 @@ C[D]<seq_number>|profile transmit save "<name>"
 ```
 C332|profile transmit save "High Power"
 ```
+
+**Note:** When auto-save is enabled (`profile autosave on`), profile changes are saved automatically. This command will return an error indicating it is no longer supported.
 
 #### CREATE
 

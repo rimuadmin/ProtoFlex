@@ -5,16 +5,85 @@ Tracking Notch Filter commands.
 
 ### TNF CREATE
 
-Create TNF.
+Create a Tracking Notch Filter.
 
 ```
 C[D]<seq_number>|tnf create freq=<MHz>
 ```
 
 **Parameters:**
-- `<MHz>` = frequency in MHz
+- `<MHz>` = frequency in MHz (6 decimal places)
 
 **Example:**
 ```
 C260|tnf create freq=14.230
+```
+
+**Response:**
+```
+R260|0||                                         (success - TNF created)
+S<message>|tnf <id> freq=14.230000 depth=1 width=0.000100 permanent=0
+```
+
+**Note:** The radio assigns a TNF ID when created, which is returned in the status message.
+
+### TNF SET
+
+Set TNF parameters.
+
+```
+C[D]<seq_number>|tnf set <id> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `freq` | MHz (6 decimals) | Set TNF frequency |
+| `depth` | `1`, `2`, or `3` | Set TNF depth (1=shallow, 3=deep) |
+| `width` | `0.000005-0.006000` | Set TNF bandwidth in MHz (5µHz to 6000µHz) |
+| `permanent` | `0\|1` | Set permanent flag (0=temporary, 1=permanent) |
+
+**Examples:**
+```
+C261|tnf set 1 freq=14.235000
+C262|tnf set 1 depth=2
+C263|tnf set 1 width=0.000100
+C264|tnf set 1 permanent=1
+```
+
+**Responses:**
+```
+R261|0||                                         (success - frequency set)
+R262|0||                                         (success - depth set)
+R263|0||                                         (success - width set)
+R264|0||                                         (success - permanent flag set)
+```
+
+**Notes:**
+- TNF IDs are assigned by the radio when created
+- Depth values: 1 (shallow notch), 2 (medium), 3 (deep notch)
+- Width is specified in MHz: 0.000005 MHz = 5 Hz, 0.006000 MHz = 6000 Hz
+- Permanent TNFs persist across frequency changes
+
+### TNF REMOVE
+
+Remove a Tracking Notch Filter.
+
+```
+C[D]<seq_number>|tnf remove <id>
+```
+
+**Parameters:**
+- `<id>` = TNF identifier (assigned by radio)
+
+**Example:**
+```
+C265|tnf remove 1
+```
+
+**Response:**
+```
+R265|0||                                         (success - TNF removed)
+S<message>|tnf 1 removed
 ```

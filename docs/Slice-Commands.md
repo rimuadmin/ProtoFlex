@@ -168,7 +168,7 @@ C[D]<seq_number>|slice set <slice_index> <parameter>=<value>
 | `play` | `0\|1` | Control audio playback |
 | `record` | `0\|1` | Control audio recording |
 | `repeater_offset_dir` | `simplex\|up\|down` | Set repeater offset direction |
-| `rfgain` | `value` | Set slice RF gain (obsolete) |
+| `rfgain` | `value` | **OBSOLETE** - Use `display pan set <stream_id> rfgain=<value>` instead |
 | `rit_freq` | `-99999 to 99999` | Set RIT frequency offset in Hz |
 | `rit_on` | `0\|1` | Enable/disable RIT |
 | `rnnoise` | `0\|1` | Enable/disable RNNoise |
@@ -196,7 +196,25 @@ C26|slice set 0 mode=USB
 C27|slice set 0 audio_level=75
 C28|slice set 0 agc_mode=fast
 C29|slice set 0 rxant=ANT1
+C30|slice set 0 nb=1 nb_level=50
+C31|slice set 0 lms_nr=1 lms_nr_level=75
+C32|slice set 0 rnnoise=1
 ```
+
+**Notes:**
+- **Noise Reduction**: Multiple noise reduction types available:
+  - `nr` / `nr_level` - Standard noise reduction
+  - `lms_nr` / `lms_nr_level` - LMS (Least Mean Squares) legacy noise reduction
+  - `rnnoise` - AI-based RNNoise algorithm
+  - `nrf` / `nrf_level` - Noise Reduction with Filter
+  - `speex_nr` / `speex_nr_level` - Speex noise reduction
+- **Noise Blanker**: Use `nb` to enable and `nb_level` to set the threshold (0-100)
+- **Auto Notch Filter**: Multiple ANF types:
+  - `anf` / `anf_level` - Standard auto notch filter
+  - `anft` - FFT-based auto notch filter
+  - `lms_anf` / `lms_anf_level` - LMS legacy auto notch filter
+- **OBSOLETE**: `rfgain` parameter is obsolete - use Display Pan commands instead
+- **Filter Control**: For filter bandwidth control, see [Filter Commands](Filter-Commands.md) (`filt` command)
 
 ### SLICE TUNE
 

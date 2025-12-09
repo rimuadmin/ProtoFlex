@@ -36,9 +36,20 @@ C[D]<seq_number>|display pan set <stream_id> <parameter>=<value>
 
 | Parameter | Value Range | Description |
 |-----------|-------------|-------------|
+| `band` | `band_designation` | Set panadapter band |
+| `band_zoom` | `0\|1` | Enable/disable band zoom |
+| `bandwidth` | `MHz` | Set panadapter bandwidth (min/max limits apply) |
 | `center` | `MHz` | Set panadapter center frequency |
+| `daxiq_channel` | `0-7` | Set DAX IQ channel assignment |
 | `max_dbm` | `dBm_level` | Set panadapter maximum dBm display level |
 | `min_dbm` | `dBm_level` | Set panadapter minimum dBm display level |
+| `rfgain` | `value` | Set RF gain for this panadapter |
+| `rxant` | `ANT1\|ANT2\|RXA\|RXB\|XVTR` | Set receive antenna for this panadapter |
+| `segment_zoom` | `0\|1` | Enable/disable segment zoom |
+| `wnb` | `0\|1` | Enable/disable wideband noise blanker |
+| `wnb_level` | `0-100` | Set wideband noise blanker level |
+| `xpixels` | `width` | Set display width in pixels |
+| `ypixels` | `height` | Set display height in pixels |
 
 **Parameters:**
 - `<stream_id>` = panadapter stream ID (hexadecimal format: 0x40000000)
@@ -48,6 +59,14 @@ C[D]<seq_number>|display pan set <stream_id> <parameter>=<value>
 C111|display pan set 0x40000000 center=14.200000
 C112|display pan set 0x40000000 max_dbm=-10.0
 C113|display pan set 0x40000000 min_dbm=-140.0
+C114|display pan set 0x40000000 band_zoom=1
+C115|display pan set 0x40000000 segment_zoom=0
+C116|display pan set 0x40000000 wnb=1 wnb_level=50
+C117|display pan set 0x40000000 rxant=ANT1
+C118|display pan set 0x40000000 rfgain=0
+C119|display pan set 0x40000000 bandwidth=0.200000
+C11a|display pan set 0x40000000 daxiq_channel=1
+C11b|display pan set 0x40000000 xpixels=800 ypixels=200
 ```
 
 **Responses:**
@@ -55,7 +74,14 @@ C113|display pan set 0x40000000 min_dbm=-140.0
 R111|0||                                         (success - center frequency set)
 R112|0||                                         (success - max dBm level set)
 R113|0||                                         (success - min dBm level set)
+R114|0||                                         (success - band zoom enabled)
 ```
+
+**Notes:**
+- Center frequency changes may be rejected by the radio if out of valid range
+- Bandwidth has minimum and maximum limits enforced by the radio
+- RF gain value depends on radio model and preamp/attenuator configuration
+- WNB (Wideband Noise Blanker) is controlled separately from slice NB (Noise Blanker)
 
 ## Waterfall Commands
 

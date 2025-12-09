@@ -35,6 +35,8 @@ C[D]<seq_number>|transmit set <parameter>=<value> [additional_parameters]
 | `show_tx_in_waterfall` | `0\|1` | Show/hide transmit signal in waterfall display |
 | `speech_processor_enable` | `0\|1` | Enable/disable speech processor |
 | `speech_processor_level` | `0-100` | Set speech processor level percentage |
+| `synccwx` | `0\|1` | Synchronize CWX with transmit |
+| `tune_mode` | `single_tone\|two_tone` | Set tune mode (single tone or two tone) |
 | `tunepower` | `0-100` | Set tune power level percentage |
 | `vox_delay` | `0-100` | Set VOX delay time |
 | `vox_enable` | `0\|1` | Enable/disable VOX |
@@ -47,6 +49,8 @@ C81|transmit set compander=1
 C82|transmit set rfpower=50
 C83|transmit set filter_low=100 filter_high=3000
 C84|transmit set speech_processor_enable=1
+C85|transmit set tune_mode=single_tone
+C86|transmit set synccwx=1
 ```
 
 **Responses:**
@@ -56,6 +60,8 @@ R81|0||                                          (success - compander enabled)
 R82|0||                                          (success - RF power set)
 R83|0||                                          (success - filter range set)
 R84|0||                                          (success - speech processor enabled)
+R85|0||                                          (success - tune mode set)
+R86|0||                                          (success - CWX sync enabled)
 ```
 
 ### TRANSMIT TUNE

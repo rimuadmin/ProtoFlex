@@ -46,3 +46,69 @@ C341|spot clear
 ```
 R341|0||                                         (success - all spots cleared)
 ```
+
+## SPOT SET
+
+Set parameters for an existing spot.
+
+```
+C[D]<seq_number>|spot set <spot_id> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `rx_freq` | `MHz` | Set RX frequency |
+| `tx_freq` | `MHz` | Set TX frequency |
+| `mode` | `mode` | Set mode (USB, LSB, CW, AM, FM, etc.) |
+| `callsign` | `call` | Set callsign (spaces converted to \u007f) |
+| `color` | `#AARRGGBB` | Set text color (hex ARGB format) |
+| `background_color` | `#AARRGGBB` | Set background color (hex ARGB format) |
+
+**Examples:**
+```
+C342|spot set 12345 rx_freq=14.235
+C343|spot set 12345 callsign=N1ABC
+C344|spot set 12345 mode=USB
+C345|spot set 12345 color=#FF0000FF
+C346|spot set 12345 background_color=#80FFFFFF
+```
+
+**Responses:**
+```
+R342|0||                                         (success - frequency updated)
+R343|0||                                         (success - callsign updated)
+R344|0||                                         (success - mode updated)
+```
+
+**Notes:**
+- Spot IDs are assigned by the radio when the spot is created
+- Callsign spaces are automatically converted to `\u007f` internally
+- Color format is hexadecimal `#AARRGGBB`:
+  - `AA` = Alpha (transparency: 00=transparent, FF=opaque)
+  - `RR` = Red component (00-FF)
+  - `GG` = Green component (00-FF)
+  - `BB` = Blue component (00-FF)
+
+## SPOT REMOVE
+
+Remove a specific spot from the display.
+
+```
+C[D]<seq_number>|spot remove <spot_id>
+```
+
+**Parameters:**
+- `<spot_id>` = spot identifier assigned by the radio
+
+**Example:**
+```
+C347|spot remove 12345
+```
+
+**Response:**
+```
+R347|0||                                         (success - spot removed)
+R347|50000015||Spot not found                    (error - invalid spot ID)
+```

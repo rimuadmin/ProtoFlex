@@ -67,3 +67,72 @@ C[D]<seq_number>|atu start
 ```
 C154|atu start
 ```
+
+**Response:**
+```
+R154|0||                                         (success - tuning started)
+```
+
+---
+
+## External Tuner (TGXL) Commands
+
+External tuner commands for TGXL tuners connected to the FlexRadio. These are separate from the built-in ATU.
+
+### TGXL SET
+
+Configure external tuner parameters.
+
+```
+C[D]<seq_number>|tgxl set handle=<handle> <parameter>=<value>
+```
+
+**Available Parameters:**
+
+| Parameter | Value Range | Description |
+|-----------|-------------|-------------|
+| `mode` | `0\|1` | Set tuner mode (0=standby, 1=operate) |
+| `bypass` | `0\|1` | Set tuner bypass (0=not bypassed, 1=bypassed) |
+
+**Parameters:**
+- `<handle>` = tuner handle assigned by radio (hexadecimal format)
+
+**Examples:**
+```
+C155|tgxl set handle=0x12345678 mode=1
+C156|tgxl set handle=0x12345678 bypass=0
+```
+
+**Responses:**
+```
+R155|0||                                         (success - tuner set to operate)
+R156|0||                                         (success - tuner bypass disabled)
+```
+
+### TGXL AUTOTUNE
+
+Start external tuner auto-tune process.
+
+```
+C[D]<seq_number>|tgxl autotune handle=<handle>
+```
+
+**Parameters:**
+- `<handle>` = tuner handle assigned by radio (hexadecimal format)
+
+**Example:**
+```
+C157|tgxl autotune handle=0x12345678
+```
+
+**Response:**
+```
+R157|0||                                         (success - auto-tune started)
+R157|50000015||Tuner not found                   (error - invalid handle)
+```
+
+**Notes:**
+- External tuner handles are assigned by the radio when the tuner is discovered
+- The transmit slice antenna must match the tuner antenna configuration for auto-tune to work
+- Tuner state can be: PowerUp, SelfCheck, Standby, Operate, Bypass, Fault, Unknown
+- TGXL tuners support 1x3 configuration via network settings
