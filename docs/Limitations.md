@@ -1,5 +1,5 @@
 ### Overview
-The behavior of ProtoFlex is a best attempt at mimicking the behavior of a FlexRadio, mostly based on the (now quite old) published API specifications and using WireShark to observe the network protocol behavior of a FLEX-6400 and SmartSDR version 3.10.10. There may be differences when compared to other Flex models or SmartSDR versions.
+The behavior of ProtoFlex is a best attempt at mimicking the behavior of a FlexRadio, mostly based on the (now quite old) published API specifications and using WireShark to observe the network protocol behavior of a FLEX-6400 and SmartSDR. There may be differences when compared to other Flex models.
 
 ### Spectrum Generator
 - ProtoFlex's signal generation doesn't mimic FlexRadio's Spectral Capture Units (SCUs) exactly. 
@@ -24,3 +24,11 @@ Only the most important meters are currently implemented.
 - The radio initially creates 11 basic meters items like temperature, voltage, current draw and fan speed (at least on a FLEX-6400, it might be different on other models). ProtoFlex also does this, and allows those values to be changed using the web app interface.
 - When a new slice is created, a FlexRadio adds approximately 10 new meters. ProtoFlex adds only three today: LEVEL, AGC+, 24kHz. Most significant of these is the signal level meter. ProtoFlex derives the signal level from the peak signal strength of all signals in the slice's bandpass filter. This is not how it's normally calculated, but sufficient for an emulator.
 - When a slice is removed, ProtoFlex removes the corresponding meters - identical behavior to the FlexRadio.
+
+### multiFLEX
+- FlexRadio multiFLEX allows two independent operators to simultaneously share and control a single FlexRadio transceiver from different clients or locations, effectively making one radio behave like two.
+- This is not currently supported by ProtoFlex.
+
+## SmartLink
+- FlexRadio SmartLink provides secure, internet-based remote access to your FlexRadio transceiver, allowing operation from virtually anywhere without needing a VPN.
+- This is unlikely to ever be supported by ProtoFlex as it relies on the Radio's ability to register itself with FlexRadio's SmartLink service.
